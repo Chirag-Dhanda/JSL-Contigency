@@ -313,7 +313,7 @@ Previous Module:
 - Quality Assurance
 
 Next Module:
-- Manufacturing Process Summary
+- Automation
 
 Related Topics:
 
