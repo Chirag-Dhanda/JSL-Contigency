@@ -1,0 +1,3 @@
+# Answers Future Fields
+
+**Schema**: Placeholder for future columns.

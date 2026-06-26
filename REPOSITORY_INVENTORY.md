@@ -1,0 +1,15 @@
+# Repository Inventory
+- **Top-level folders**: 22 (backend, frontend, database, docs, deployments, infrastructure, etc.)
+- **Major backend modules**: 29 (auth, users, roles, departments, learning, dashboard, etc.)
+- **Major frontend modules**: ~25 matching backend domains plus layout/core.
+- **Documentation sections**: project-overview, architecture, api, database, backend, frontend, learning-platform, security, etc.
+- **Database sections**: connections, migrations, scripts, backups, catalog.
+- **Infrastructure sections**: environments, monitoring, logging, certificates, networking, etc.
+- **Security sections**: authentication, authorization, jwt, encryption, secrets, policies, etc.
+- **AI sections**: ollama, rag, embeddings, vector-store, prompt-library, knowledge-processing.
+- **SAP sections**: pp, qm, mm, sd, fi, adapters, middleware.
+- **Testing sections**: unit, integration, api, backend, frontend, security, performance, etc.
+- **Templates**: feature-spec, implementation-plan, api-design, database-entity, etc.
+- **Developer Toolkit**: onboarding, setup, local-dev, debugging, ai-development, etc.
+- **Governance**: project-constitution, decision-records, policies, architecture-board, technical-roadmaps.
+- **Knowledge Base**: raw, processed, chunked, manufacturing, sop, engineering, etc.
