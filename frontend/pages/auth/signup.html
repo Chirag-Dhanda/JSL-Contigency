@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | JSL Digital Learning Academy</title>
+
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<main class="container">
+
+<section class="left-panel">
+
+<div class="logo">
+
+<img src="../../assets/logo.png" alt="JSL Logo">
+
+</div>
+
+<div class="heading">
+
+<h1>Create Your <span>Learning Account</span></h1>
+
+<p>
+
+Use your company details to register for the JSL Digital Learning Academy.
+
+</p>
+
+</div>
+
+<div class="login-card">
+
+<form id="signupForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-id-card"></i>
+
+<input
+type="text"
+placeholder="Employee ID"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+placeholder="Company Email"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-building"></i>
+
+<input
+type="text"
+placeholder="Department"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+placeholder="Create Password"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+placeholder="Confirm Password"
+required>
+
+</div>
+
+<button>
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="divider">
+
+<span>Already Registered?</span>
+
+</div>
+
+<a href="../../index.html" class="signup-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back to Login
+
+</a>
+
+</div>
+
+</section>
+
+<section class="right-panel">
+
+<div class="overlay">
+
+<div class="hero-content">
+
+<h1>
+
+Join.
+
+<br>
+
+Learn.
+
+<br>
+
+Excel.
+
+</h1>
+
+<p>
+
+Begin your journey through JSL's manufacturing processes,
+SAP workflows,
+quality systems,
+and operational excellence.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+document.getElementById("signupForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Account Created Successfully!");
+
+window.location.href="../../index.html";
+
+});
+
+</script>
+
+</body>
+
+</html>

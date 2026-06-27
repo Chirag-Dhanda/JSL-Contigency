@@ -1,0 +1,18 @@
+from enum import Enum
+
+class EquipmentStatus(str, Enum):
+    ACTIVE = "ACTIVE"
+    INACTIVE = "INACTIVE"
+    MAINTENANCE = "MAINTENANCE"
+    DECOMMISSIONED = "DECOMMISSIONED"
+
+class EngineeringDataType(str, Enum):
+    TEMPERATURE = "TEMPERATURE"
+    PRESSURE = "PRESSURE"
+    SPEED = "SPEED"
+    FLOW_RATE = "FLOW_RATE"
+    VOLTAGE = "VOLTAGE"
+    CURRENT = "CURRENT"
+    VIBRATION = "VIBRATION"
+    HUMIDITY = "HUMIDITY"
+    CUSTOM = "CUSTOM"

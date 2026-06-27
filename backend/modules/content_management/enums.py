@@ -1,0 +1,15 @@
+from enum import Enum
+
+class ContentStatus(str, Enum):
+    DRAFT = "DRAFT"
+    UNDER_REVIEW = "UNDER_REVIEW"
+    APPROVED = "APPROVED"
+    PUBLISHED = "PUBLISHED"
+    ARCHIVED = "ARCHIVED"
+    DEPRECATED = "DEPRECATED"
+
+class ApprovalRole(str, Enum):
+    AUTHOR = "AUTHOR"
+    REVIEWER = "REVIEWER"
+    DEPARTMENT_MANAGER = "DEPARTMENT_MANAGER"
+    ADMINISTRATOR = "ADMINISTRATOR"

@@ -1,0 +1,41 @@
+{
+    "personas": [
+        {
+            "user_id": "usr-001",
+            "name": "Amit Kumar",
+            "role": "New Intern",
+            "department": "STEEL_MELTING_SHOP",
+            "learning_progress": {
+                "completed_safety_modules": ["FIRE_SAFETY_101"],
+                "pending_safety_modules": ["ELECTRICAL_SAFETY_101", "CONFINED_SPACE_ENTRY"],
+                "compliance_status": "NON_COMPLIANT"
+            }
+        },
+        {
+            "user_id": "usr-002",
+            "name": "Rajesh Singh",
+            "role": "Shift Engineer",
+            "department": "HOT_ROLLING_MILL",
+            "learning_progress": {
+                "completed_safety_modules": ["FIRE_SAFETY_101", "ELECTRICAL_SAFETY_101", "MECHANICAL_SAFETY_101"],
+                "compliance_status": "COMPLIANT",
+                "certifications": ["cert-hrm-operator"]
+            },
+            "bookmarks": ["sop-hrm-start", "res-hrm-manual"]
+        },
+        {
+            "user_id": "usr-003",
+            "name": "Priya Sharma",
+            "role": "Department Head",
+            "department": "QUALITY_ASSURANCE",
+            "learning_progress": {
+                "compliance_status": "COMPLIANT"
+            },
+            "dashboard_stats_view": {
+                "total_employees": 45,
+                "compliant_employees": 40,
+                "non_compliant_employees": 5
+            }
+        }
+    ]
+}

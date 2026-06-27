@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>User Directory | Enterprise OS</title>
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+  .table-container { background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: var(--glass-border); margin-bottom: 2rem; }
+  table { width: 100%; border-collapse: collapse; color: var(--text-primary); }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  th { color: var(--text-secondary); font-weight: 500; }
+  .badge-role { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; background: rgba(234,179,8,0.2); color: #eab308; }
+</style>
+</head>
+<body>
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../../assets/logo.png" alt="JSL">
+      <h2>Enterprise OS</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="../dashboard/dashboard.html"><i class="fa-solid fa-home"></i> <span>Dashboard</span></a></li>
+        <li><a href="../metadata/list.html"><i class="fa-solid fa-database"></i> <span>Metadata Engine</span></a></li>
+        <li><a href="users.html" class="active"><i class="fa-solid fa-users"></i> <span>User Directory</span></a></li>
+        <li><a href="../learning/plant-workflow.html"><i class="fa-solid fa-book"></i> <span>Knowledge Studio</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="search-bar">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="userSearch" placeholder="Search employees...">
+      </div>
+      <div class="user-profile">
+        <span id="userNameDisplay">Admin</span>
+        <i class="fa-solid fa-user-circle"></i>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      <div class="welcome-banner">
+        <div>
+          <h1>Enterprise User Directory</h1>
+          <p>Centralized view of all organization personnel and system accounts.</p>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr><td colspan="5">Loading users...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </main>
+</div>
+<script type="module" src="../../js/controllers/admin.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+from enum import Enum
+
+class ManufacturingDomain(str, Enum):
+    STEEL_MAKING = "Steel Making"
+    ELECTRIC_ARC_FURNACE = "Electric Arc Furnace"
+    AOD = "Argon Oxygen Decarburization"
+    LRF = "Ladle Refining Furnace"
+    CONTINUOUS_CASTING = "Continuous Casting"
+    HOT_ROLLING = "Hot Rolling"
+    COLD_ROLLING = "Cold Rolling"
+    ANNEALING = "Annealing"
+    PICKLING = "Pickling"
+    GRINDING = "Grinding"
+    SLITTING = "Slitting"
+    PACKAGING = "Packaging"
+    QUALITY_INSPECTION = "Quality Inspection"
+    MAINTENANCE = "Maintenance"
+    SAFETY = "Safety"
+    UTILITIES = "Utilities"
+    UNKNOWN = "Unknown"

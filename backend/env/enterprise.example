@@ -1,0 +1,9 @@
+# ENTERPRISE PROFILE (JSL Specific)
+APP_ENVIRONMENT=Enterprise
+APP_DEBUG=False
+LOGGING_LOG_LEVEL=WARNING
+
+# Custom SAP / Active Directory Overrides
+SAP_HOST=internal.sap.jsl.com
+SAP_CLIENT=100
+SAP_SYSTEM_NUMBER=00
