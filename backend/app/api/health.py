@@ -1,22 +1,20 @@
 import os
 from fastapi import APIRouter, Depends
-from config.settings import get_settings, Settings
+from config.manager import get_config, ConfigManager
 from logging import getLogger
 import sys
 
-# Using relative path from the app module to avoid absolute issues for now
-# We will just import logging directly
 import logging
-logger = logging.getLogger("jsl_app")
+logger = logging.getLogger("HealthAPI")
 
 router = APIRouter()
 
 @router.get("/health", summary="Health Check")
-async def health_check(settings: Settings = Depends(get_settings)):
+async def health_check(config: ConfigManager = Depends(get_config)):
     logger.info("Health check endpoint accessed.")
     return {
         "status": "healthy",
-        "app_name": settings.app_name,
-        "environment": settings.environment,
+        "app_name": config.app.app_name,
+        "environment": config.app.environment,
         "python_version": sys.version
     }

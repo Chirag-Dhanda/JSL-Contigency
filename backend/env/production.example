@@ -1,0 +1,7 @@
+# PRODUCTION PROFILE
+APP_ENVIRONMENT=Production
+APP_DEBUG=False
+LOGGING_LOG_LEVEL=INFO
+
+# DB_DATABASE_URL must be injected securely via CI/CD or Secrets Manager
+# AUTH_JWT_SECRET must be injected securely via CI/CD or Secrets Manager

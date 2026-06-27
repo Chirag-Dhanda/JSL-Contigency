@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Metadata Engine | Enterprise OS</title>
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+  .table-container { background: var(--glass-bg); padding: 1.5rem; border-radius: var(--radius-lg); border: var(--glass-border); margin-bottom: 2rem; }
+  table { width: 100%; border-collapse: collapse; color: var(--text-primary); }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  th { color: var(--text-secondary); font-weight: 500; }
+  .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; background: rgba(56,189,248,0.2); color: var(--color-primary); }
+</style>
+</head>
+<body>
+<div class="layout">
+  <!-- Sidebar (Temporary inclusion for demo) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../../assets/logo.png" alt="JSL">
+      <h2>Enterprise OS</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="../dashboard/dashboard.html"><i class="fa-solid fa-home"></i> <span>Dashboard</span></a></li>
+        <li><a href="list.html" class="active"><i class="fa-solid fa-database"></i> <span>Metadata Engine</span></a></li>
+        <li><a href="../admin/users.html"><i class="fa-solid fa-users"></i> <span>User Directory</span></a></li>
+        <li><a href="../learning/plant-workflow.html"><i class="fa-solid fa-book"></i> <span>Knowledge Studio</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div class="search-bar">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="metadataSearch" placeholder="Search templates and objects...">
+      </div>
+      <div class="user-profile">
+        <span id="userNameDisplay">Admin</span>
+        <i class="fa-solid fa-user-circle"></i>
+      </div>
+    </header>
+
+    <div class="dashboard-content">
+      <div class="welcome-banner">
+        <div>
+          <h1>Enterprise Metadata Engine</h1>
+          <p>Dynamic schemas and object templates powered by the backend architecture.</p>
+        </div>
+      </div>
+
+      <h2>Registered Templates (Types)</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Display Name</th>
+              <th>Category</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="templatesTableBody">
+            <tr><td colspan="4">Loading templates from backend...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <h2>Dynamic Objects (Entities)</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Entity ID</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Created By</th>
+            </tr>
+          </thead>
+          <tbody id="objectsTableBody">
+            <tr><td colspan="4">Loading objects from backend...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="module" src="../../js/controllers/metadata.controller.js"></script>
+</body>
+</html>

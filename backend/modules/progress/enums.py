@@ -1,0 +1,15 @@
+from enum import Enum
+
+class ProgressStatus(str, Enum):
+    NOT_STARTED = "NOT_STARTED"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+
+class EntityType(str, Enum):
+    LESSON = "LESSON"
+    ROADMAP = "ROADMAP"
+    KNOWLEDGE_OBJECT = "KNOWLEDGE_OBJECT"
+    STATION = "STATION"
+    ASSESSMENT = "ASSESSMENT"
+    CERTIFICATE = "CERTIFICATE"
+    PRACTICAL_TASK = "PRACTICAL_TASK"

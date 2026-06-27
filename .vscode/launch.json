@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Backend (uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"],
+      "cwd": "${workspaceFolder}/backend",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "subProcess": true,
+      "env": {
+        "ENV": "development",
+        "PORT": "8000"
+      },
+      "skipFiles": [
+        "<frozen importlib._bootstrap>*",
+        "<frozen importlib._bootstrap_external>*"
+      ]
+    },
+    {
+      "name": "React: Frontend (Vite)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend_app",
+      "preLaunchTask": "Frontend: Start App"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "hubs": [
+        {
+            "department_type": "STEEL_MELTING_SHOP",
+            "mission": "To safely and efficiently melt raw materials into high-quality liquid steel.",
+            "announcements": [
+                {
+                    "title": "EAF Maintenance Schedule",
+                    "content": "EAF #1 will be down for refractory maintenance this weekend."
+                }
+            ],
+            "linked_resources": ["res-eaf-manual-01", "res-aod-safety-01"],
+            "linked_sops": ["sop-sms-001", "sop-sms-002"]
+        },
+        {
+            "department_type": "INFORMATION_TECHNOLOGY",
+            "mission": "To provide robust digital infrastructure and support for the enterprise.",
+            "announcements": [
+                {
+                    "title": "New SCADA Integration",
+                    "content": "The new SCADA IoT bindings will be deployed to staging next week."
+                }
+            ],
+            "linked_resources": ["res-it-network-map"],
+            "linked_sops": ["sop-it-001"]
+        }
+    ]
+}

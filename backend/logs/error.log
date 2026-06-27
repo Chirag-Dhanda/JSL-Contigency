@@ -1,0 +1,1366 @@
+2026-06-26 12:47:21,665 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 18, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:47:42,867 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 18, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:51:01,772 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:51:01,781 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Resolution failed for DummyService
+2026-06-26 12:51:01,781 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Service DummyService has not been registered in the container. on path /api/v1/test/di/test
+2026-06-26 12:51:25,997 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 12:51:26,014 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:54:25,436 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 12:54:25,448 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:54:25,455 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 12:57:05,845 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 12:57:05,867 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 12:57:05,877 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 13:00:05,709 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:00:05,728 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:00:05,737 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 13:04:21,923 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:04:21,942 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:04:21,951 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 13:04:21,995 | WARNING  | [passlib.handlers.bcrypt] | ReqID:- | User:- | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-26 13:04:43,146 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:04:43,160 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:04:43,166 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 13:07:42,108 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:07:42,121 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:07:42,126 | ERROR    | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.INTERNAL_ERROR - System Error: Not Implemented: User Fetching on path /api/v1/auth/login
+2026-06-26 13:11:15,951 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:11:34,976 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:11:35,460 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:11:35,471 | WARNING  | [JWTService] | ReqID:- | User:- | Invalid JWT format: Not enough segments
+2026-06-26 13:11:35,474 | WARNING  | [JWTService] | ReqID:- | User:- | Invalid JWT format: Not enough segments
+2026-06-26 13:11:58,335 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:11:58,799 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:11:59,048 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:12:00,006 | WARNING  | [AuthMiddleware] | ReqID:- | User:- | Attempted use of revoked session JTI: 49c2f600-d45a-490b-bd7e-1a1dfc548264
+2026-06-26 13:15:52,317 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:15:52,797 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:15:53,036 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:15:54,331 | WARNING  | [AuthMiddleware] | ReqID:- | User:- | Attempted use of revoked session JTI: db7a214e-c4b9-4262-a374-bcc11bd69be9
+2026-06-26 13:16:10,930 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:16:11,455 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:16:11,700 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:16:12,912 | WARNING  | [AuthMiddleware] | ReqID:- | User:- | Attempted use of revoked session JTI: 0b3145bc-02b0-431f-884c-8d438bc39d30
+2026-06-26 13:16:12,913 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:16:38,240 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:16:38,704 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:16:38,970 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:16:40,217 | WARNING  | [AuthMiddleware] | ReqID:- | User:- | Attempted use of revoked session JTI: c0f39598-57c2-4e90-9341-9ac5e1f46484
+2026-06-26 13:16:40,220 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:19:21,091 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:19:21,560 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:19:21,821 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:19:22,794 | WARNING  | [AuthMiddleware] | ReqID:- | User:- | Attempted use of revoked session JTI: 3b7f4ce0-fd23-40d3-bb90-4b0db5b6a410
+2026-06-26 13:19:22,795 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:23:23,790 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:23:24,335 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 39, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:23:24,653 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:23:24,655 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,657 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/auth/login
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,658 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,660 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/auth/change-password
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,661 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,662 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/auth/login
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,665 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,666 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/protected
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,668 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,669 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/auth/logout
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,670 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,672 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/protected
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,674 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:23:24,677 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,678 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,680 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,681 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,683 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,684 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,686 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,687 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,689 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,690 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,692 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,694 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:24,695 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:24,697 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: Too Many Requests on path /api/v1/test/di/test
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 25, in dispatch
+    raise e
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 22, in dispatch
+    await limiter.check_rate_limit(client_ip)
+  File "D:\JSL Contigency\backend\modules\security\rate_limiter.py", line 31, in check_rate_limit
+    raise RateLimitExceeded()
+modules.security.rate_limiter.RateLimitExceeded: Too Many Requests
+
+2026-06-26 13:23:46,133 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:23:46,707 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:23:47,033 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:23:47,036 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,038 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,040 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,041 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,043 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,045 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,047 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:23:47,050 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,052 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,054 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,056 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,058 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,059 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:23:47,061 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:41,595 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:26:42,255 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:26:42,582 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:26:42,585 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,587 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,589 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,591 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,593 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,594 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,596 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:26:42,599 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,601 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,603 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,605 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,607 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,609 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:26:42,610 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:29:49,444 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:30:10,739 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:30:11,469 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:30:11,825 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:30:11,828 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,829 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,831 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,833 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,835 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,837 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,839 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:30:11,843 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,845 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,847 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,848 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,850 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,852 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:30:11,854 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:37,724 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-26 13:40:38,523 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Chirag\AppData\Local\Programs\Python\Python313\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-26 13:40:38,966 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-26 13:40:38,969 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,971 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,974 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,976 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,978 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,981 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,983 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-26 13:40:38,987 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,989 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,991 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,993 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,996 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:38,998 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-26 13:40:39,000 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 15:50:28,097 | ERROR    | [EmbeddingsModule] | ReqID:- | User:- | Failed to initialize Embeddings Module: 'EmbeddingEngine' object has no attribute 'start_workers'
+2026-06-27 15:50:28,116 | ERROR    | [EmbeddingsModule] | ReqID:- | User:- | Failed to initialize Embeddings Module: 'EmbeddingEngine' object has no attribute 'start_workers'
+2026-06-27 15:50:28,133 | ERROR    | [EmbeddingsModule] | ReqID:- | User:- | Failed to initialize Embeddings Module: 'EmbeddingEngine' object has no attribute 'start_workers'
+2026-06-27 15:50:28,151 | ERROR    | [EmbeddingsModule] | ReqID:- | User:- | Failed to initialize Embeddings Module: 'EmbeddingEngine' object has no attribute 'start_workers'
+2026-06-27 15:50:32,707 | ERROR    | [EmbeddingsModule] | ReqID:- | User:- | Failed to initialize Embeddings Module: 'EmbeddingEngine' object has no attribute 'start_workers'
+2026-06-27 15:53:32,195 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 15:53:32,692 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,699 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,703 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,776 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,785 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,788 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:53:32,843 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:54:16,674 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:54:16,691 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:58:11,391 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:58:11,399 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:02,801 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:02,807 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:09,167 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:14,873 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user intern@jsl.com. Count: 1
+2026-06-27 15:59:14,968 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:14,974 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 15:59:14,983 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:02:02,165 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:07:25,939 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user intern@jsl.com. Count: 2
+2026-06-27 16:07:26,097 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:07:26,104 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:07:26,109 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:07:26,119 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:07:26,125 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | JSL Enterprise OS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../../css/common.css">
+<link rel="stylesheet" href="../../css/dashboard.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+<style>
+/* ---- Stat Strip ---- */
+.stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.stat-card {
+    background: var(--glass-bg, rgba(255,255,255,0.06));
+    border: var(--glass-border, 1px solid rgba(255,255,255,0.1));
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.stat-card .stat-label { color: var(--text-secondary, #9ca3af); font-size: 0.8rem; }
+.stat-card .stat-value { font-size: 1.8rem; font-weight: 700; color: #38bdf8; }
+.stat-card .stat-sub   { font-size: 0.75rem; color: var(--text-secondary, #9ca3af); }
+
+/* ---- Section ---- */
+.section-title { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--text-primary, #f1f5f9); }
+
+/* ---- Equipment Table ---- */
+.data-table-wrap { overflow-x: auto; }
+table.data-table { width: 100%; border-collapse: collapse; color: var(--text-primary, #f1f5f9); font-size: 0.88rem; }
+table.data-table th, table.data-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.07); text-align: left; }
+table.data-table th { color: var(--text-secondary, #9ca3af); font-weight: 500; }
+.status-active   { color: #4ade80; font-weight: 600; }
+.status-maintenance { color: #facc15; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="dashboard-container">
+
+<!-- TOPBAR -->
+<header class="topbar">
+<div>
+<h1 id="welcomeName">Welcome to JSL Enterprise OS</h1>
+<p id="currentDate"></p>
+</div>
+<div class="profile">
+<div class="avatar"><i class="fa-solid fa-user"></i></div>
+<div>
+<h3 id="profileName">Employee</h3>
+<p id="roleName">User</p>
+</div>
+<button id="logoutBtn" title="Logout" style="background:none;border:none;cursor:pointer;color:#9ca3af;font-size:1.2rem;margin-left:1rem;"><i class="fa-solid fa-right-from-bracket"></i></button>
+</div>
+</header>
+
+<!-- STAT STRIP -->
+<section>
+<div class="stat-strip" id="statStrip">
+    <div class="stat-card">
+        <span class="stat-label"><i class="fa-solid fa-industry"></i> Equipment Units</span>
+        <span class="stat-value" id="statEquipment">—</span>
+        <span class="stat-sub">Active across plants</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label"><i class="fa-solid fa-file-alt"></i> SOPs & Docs</span>
+        <span class="stat-value" id="statDocs">—</span>
+        <span class="stat-sub">Knowledge documents</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label"><i class="fa-solid fa-users"></i> Personnel</span>
+        <span class="stat-value" id="statUsers">—</span>
+        <span class="stat-sub">Enterprise accounts</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label"><i class="fa-solid fa-database"></i> Object Templates</span>
+        <span class="stat-value" id="statTemplates">—</span>
+        <span class="stat-sub">Metadata schemas</span>
+    </div>
+</div>
+</section>
+
+<!-- LEARNING JOURNEY -->
+<section class="journey">
+<h2>Learning Journey</h2>
+<div class="steps">
+<div class="step completed"><span>✓</span><p>Company Overview</p></div>
+<div class="line"></div>
+<div class="step active"><span>2</span><p>Plant Workflow</p></div>
+<div class="line"></div>
+<div class="step"><span>3</span><p>Departments</p></div>
+<div class="line"></div>
+<div class="step"><span>4</span><p>SAP Learning</p></div>
+<div class="line"></div>
+<div class="step"><span>5</span><p>Assessment</p></div>
+</div>
+</section>
+
+<!-- QUICK ACCESS -->
+<section class="quick-access">
+<h2>Quick Access</h2>
+<div class="quick-grid">
+<a href="../learning/company-overview.html" class="quick-card active"><i class="fa-solid fa-building"></i><h3>Company Overview</h3></a>
+<a href="../learning/plant-workflow.html" class="quick-card"><i class="fa-solid fa-industry"></i><h3>Plant Workflow</h3></a>
+<a href="../learning/departments.html" class="quick-card"><i class="fa-solid fa-sitemap"></i><h3>Departments</h3></a>
+<a href="../learning/assessments.html" class="quick-card"><i class="fa-solid fa-clipboard-question"></i><h3>Assessments</h3></a>
+<a href="../learning/certificates.html" class="quick-card"><i class="fa-solid fa-award"></i><h3>Certificates</h3></a>
+<a href="../metadata/list.html" class="quick-card"><i class="fa-solid fa-database"></i><h3>Metadata Engine</h3></a>
+<a href="../admin/users.html" class="quick-card"><i class="fa-solid fa-users"></i><h3>User Directory</h3></a>
+<a href="#" class="quick-card"><i class="fa-solid fa-user"></i><h3>Profile</h3></a>
+</div>
+</section>
+
+<!-- EQUIPMENT STATUS -->
+<section>
+<h2 class="section-title"><i class="fa-solid fa-industry"></i> Manufacturing Equipment Status</h2>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead><tr><th>Asset ID</th><th>Equipment</th><th>Department</th><th>Plant</th><th>Status</th></tr></thead>
+<tbody id="equipmentTableBody"><tr><td colspan="5">Loading…</td></tr></tbody>
+</table>
+</div>
+</section>
+
+<!-- KNOWLEDGE DOCS -->
+<section>
+<h2 class="section-title"><i class="fa-solid fa-file-alt"></i> Recent Knowledge Documents</h2>
+<div class="data-table-wrap">
+<table class="data-table">
+<thead><tr><th>Document ID</th><th>Title</th><th>Type</th><th>Department</th></tr></thead>
+<tbody id="docsTableBody"><tr><td colspan="4">Loading…</td></tr></tbody>
+</table>
+</div>
+</section>
+
+<!-- ROLE WIDGETS -->
+<section class="quick-access" id="roleWidgetSection" style="display:none">
+<h2>Role-Based Workspace</h2>
+<div class="quick-grid" id="roleWidgets"></div>
+</section>
+
+<!-- DEPARTMENT CARDS -->
+<section class="activity" id="departmentSection" style="display:none">
+<h2>Department Overview</h2>
+<div id="departmentCards" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem;"></div>
+</section>
+
+<!-- RECENT ACTIVITY -->
+<section class="activity">
+<h2>Recent Activity</h2>
+<table>
+<thead><tr><th>Activity</th><th>Date</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Completed Company Overview</td><td>Today</td><td>✅ Completed</td></tr>
+<tr><td>EAF Startup SOP reviewed</td><td>Yesterday</td><td>✅ Completed</td></tr>
+<tr><td>Plant Workflow</td><td>-</td><td>⏳ Pending</td></tr>
+<tr><td>SAP PP Module Training</td><td>-</td><td>⏳ Pending</td></tr>
+</tbody>
+</table>
+</section>
+
+</div>
+
+<script type="module" src="../../js/controllers/dashboard.controller.js"></script>
+
+</body>
+</html>

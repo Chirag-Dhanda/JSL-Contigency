@@ -1,0 +1,22 @@
+from enum import Enum
+
+class ManufacturingStageType(str, Enum):
+    RAW_MATERIAL = "RAW_MATERIAL"
+    MELTING = "MELTING"
+    REFINING = "REFINING"
+    CASTING = "CASTING"
+    GRINDING = "GRINDING"
+    ROLLING = "ROLLING"
+    ANNEALING = "ANNEALING"
+    PICKLING = "PICKLING"
+    SLITTING = "SLITTING"
+    FINISHING = "FINISHING"
+    INSPECTION = "INSPECTION"
+    PACKING = "PACKING"
+    STORAGE = "STORAGE"
+    DISPATCH = "DISPATCH"
+
+class FlowDirection(str, Enum):
+    NEXT = "NEXT"
+    PREVIOUS = "PREVIOUS"
+    PARALLEL = "PARALLEL"

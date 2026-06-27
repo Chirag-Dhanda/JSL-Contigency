@@ -1,0 +1,19 @@
+/* Knowledge Import Styling */
+
+.upload-dropzone {
+  transition: all 0.2s ease-in-out;
+}
+
+.upload-dropzone:hover {
+  background-color: #2d3748 !important;
+  border-color: #63b3ed !important;
+}
+
+.upload-queue li {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

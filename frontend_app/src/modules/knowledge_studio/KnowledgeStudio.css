@@ -1,0 +1,181 @@
+.ks-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #0f1115;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+.ks-sidebar {
+  width: 280px;
+  background-color: #1a1d24;
+  border-right: 1px solid #2d3748;
+  display: flex;
+  flex-direction: column;
+}
+
+.ks-brand {
+  padding: 24px;
+  border-bottom: 1px solid #2d3748;
+}
+
+.ks-brand h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.ks-brand span {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ks-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  flex: 1;
+}
+
+.ks-nav a {
+  padding: 12px 24px;
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.ks-nav a:hover {
+  background-color: #2d3748;
+  color: #fff;
+}
+
+.ks-nav a.active {
+  background-color: #3182ce;
+  color: #fff;
+  border-left: 4px solid #63b3ed;
+}
+
+.ks-nav .badge {
+  background-color: #e53e3e;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.ks-user-badge {
+  padding: 20px 24px;
+  border-top: 1px solid #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ks-user-badge .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3182ce, #805ad5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.ks-main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+  background-color: #0b0c10;
+}
+
+.ks-dashboard header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.ks-dashboard header p {
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
+
+.ks-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ks-metric-card {
+  background-color: #1a1d24;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ks-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.ks-metric-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+}
+
+.ks-metric-card .value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ks-metric-card.warning .value {
+  color: #ecc94b;
+}
+
+.ks-metric-card.highlight .value {
+  color: #9f7aea;
+}
+
+.ks-recent-activity {
+  margin-top: 48px;
+  background-color: #1a1d24;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.ks-recent-activity h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid #2d3748;
+  color: #cbd5e0;
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,17 @@
+from enum import Enum
+
+class BadgeType(str, Enum):
+    SKILL = "SKILL"
+    DEPARTMENT = "DEPARTMENT"
+    MANUFACTURING = "MANUFACTURING"
+    LEADERSHIP = "LEADERSHIP"
+    SAFETY = "SAFETY"
+    INNOVATION = "INNOVATION"
+    SPECIAL_EVENT = "SPECIAL_EVENT"
+
+class CompetencyLevel(str, Enum):
+    BEGINNER = "BEGINNER"
+    INTERMEDIATE = "INTERMEDIATE"
+    ADVANCED = "ADVANCED"
+    EXPERT = "EXPERT"
+    TRAINER = "TRAINER"

@@ -1,0 +1,192 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Variables */
+
+:root{
+
+    --primary:#F97316;
+    --primary-dark:#EA580C;
+
+    --secondary:#0F172A;
+
+    --white:#FFFFFF;
+
+    --light:#F8FAFC;
+
+    --gray:#64748B;
+
+    --border:#E2E8F0;
+
+    --card:#FFFFFF;
+
+    --success:#10B981;
+
+    --danger:#EF4444;
+
+    --warning:#FACC15;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --radius:14px;
+
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--secondary);
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* Buttons */
+
+.btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* Cards */
+
+.card{
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+}
+
+/* Inputs */
+
+input{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+
+/* Utility Classes */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-40{
+
+    margin-top:40px;
+
+}
