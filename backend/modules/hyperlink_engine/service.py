@@ -15,7 +15,7 @@ class HyperlinkEngineService:
         # Pre-compute a mapping of lowercase entity names to their IDs for fast replacement.
         # In a real system, this might use a dedicated search index (e.g. ElasticSearch) or a trie.
         self._entity_map: Dict[str, str] = {}
-        for entity in self.meta_engine._entities.values():
+        for entity in self.meta_engine.list_entities():
             self._entity_map[entity.name.lower()] = entity.id
             
         logger.info("Hyperlink Engine Initialized.")

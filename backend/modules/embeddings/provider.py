@@ -1,5 +1,5 @@
 import logging
-import httpx
+import httpx  # type: ignore
 import asyncio
 from typing import List, Optional
 from modules.ai.config import ai_config

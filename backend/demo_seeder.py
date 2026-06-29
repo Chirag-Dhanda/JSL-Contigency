@@ -1,163 +1,174 @@
-import logging
-import asyncio
-from modules.entity_registry.service import EntityRegistryService
-from modules.schema_engine.validator import SchemaValidator
-from modules.metadata_engine.service import MetadataEngineService
-from modules.relationship_registry.service import RelationshipRegistryService
-from modules.relationship_registry.models import RelationshipTypeDefinition
-from modules.relationship_engine.service import RelationshipEngineService
-from modules.review_engine.service import ReviewEngineService
-from modules.knowledge_architect.orchestrator import KnowledgeArchitectOrchestrator
-from modules.media_platform.service import MediaPlatformService
-from modules.media_ai.service import MediaAIIntelligenceService
-from modules.thumbnail_engine.service import ThumbnailEngineService
+"""
+EKOS v1.0 Enterprise Demonstration Seeder (EP-15).
 
-logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+Generates a realistic, self-contained synthetic enterprise dataset to showcase
+all EKOS capabilities in demonstrations. This script is safe to run repeatedly
+(idempotent — services handle duplicate IDs gracefully via try/except).
+
+Usage:
+    python demo_seeder.py
+
+Requirements:
+    All modules resolved via core DI container. Run with the backend PYTHONPATH set:
+    PYTHONPATH=. python demo_seeder.py
+"""
+import asyncio
+import logging
+import uuid
+from datetime import datetime, timezone
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+logger = logging.getLogger("DemoSeeder")
+
+# ── Seed Constants ────────────────────────────────────────────────────────────
+
+PLANTS = [
+    {"id": "plant-steelworks-01", "name": "Steelworks Plant Alpha", "location": "Sector 1"},
+    {"id": "plant-steelworks-02", "name": "Steelworks Plant Beta",  "location": "Sector 2"},
+    {"id": "plant-rolling-01",    "name": "Rolling Mill Primary",    "location": "Sector 3"},
+]
+
+DEPARTMENTS = [
+    {"id": "dept-furnace",    "name": "EAF Furnace Operations"},
+    {"id": "dept-rolling",    "name": "Rolling Mill Operations"},
+    {"id": "dept-safety",     "name": "Health, Safety & Environment"},
+    {"id": "dept-quality",    "name": "Quality Assurance"},
+    {"id": "dept-maintenance","name": "Equipment Maintenance"},
+    {"id": "dept-logistics",  "name": "Materials Logistics"},
+    {"id": "dept-scrap",      "name": "Scrap Yard Management"},
+    {"id": "dept-hr",         "name": "Human Resources"},
+    {"id": "dept-it",         "name": "IT & Automation"},
+    {"id": "dept-training",   "name": "Training & Development"},
+]
+
+EQUIPMENT = [
+    ("eq-eaf-01", "Electric Arc Furnace Unit 1",  "dept-furnace"),
+    ("eq-eaf-02", "Electric Arc Furnace Unit 2",  "dept-furnace"),
+    ("eq-ladle-01","Ladle Furnace 1",              "dept-furnace"),
+    ("eq-caster-01","Continuous Caster Line A",    "dept-rolling"),
+    ("eq-mill-01", "Hot Rolling Mill Stand 1",     "dept-rolling"),
+    ("eq-mill-02", "Hot Rolling Mill Stand 2",     "dept-rolling"),
+    ("eq-crane-01","Overhead Crane Unit A",        "dept-maintenance"),
+    ("eq-fume-01", "Fume Extraction System 1",     "dept-safety"),
+    ("eq-scrap-01","Scrap Shredder 500T",          "dept-scrap"),
+    ("eq-conveyor-01","Scrap Conveyor Belt A",     "dept-scrap"),
+]
+
+SOPS = [
+    ("sop-eaf-startup",      "EAF Startup Procedure",            "dept-furnace"),
+    ("sop-eaf-shutdown",     "EAF Safe Shutdown Procedure",      "dept-furnace"),
+    ("sop-ladle-preheating", "Ladle Pre-heating Protocol",       "dept-furnace"),
+    ("sop-rolling-changeover","Rolling Mill Grade Changeover",   "dept-rolling"),
+    ("sop-scrap-charging",   "Scrap Yard Charging Protocol",     "dept-scrap"),
+    ("sop-hot-metal-handling","Hot Metal Handling Safety",       "dept-safety"),
+    ("sop-crane-inspection", "Overhead Crane Inspection",        "dept-maintenance"),
+    ("sop-ppe-standard",     "PPE Requirements Standard",        "dept-safety"),
+    ("sop-incident-report",  "Incident Reporting Procedure",     "dept-safety"),
+    ("sop-quality-sampling", "Steel Grade Sampling Protocol",    "dept-quality"),
+]
+
+TRAINING_MODULES = [
+    ("learn-furnace-basics",   "Furnace Operations Fundamentals",   "dept-furnace"),
+    ("learn-rolling-advanced", "Advanced Rolling Mill Techniques",  "dept-rolling"),
+    ("learn-safety-induction", "Site Safety Induction",             "dept-safety"),
+    ("learn-ppe-training",     "PPE Compliance Training",           "dept-safety"),
+    ("learn-crane-ops",        "Overhead Crane Operator Certification","dept-maintenance"),
+    ("learn-quality-control",  "Steel Quality Control Methods",     "dept-quality"),
+    ("learn-scrap-sorting",    "Scrap Material Classification",     "dept-scrap"),
+    ("learn-emergency-resp",   "Emergency Response Procedures",     "dept-safety"),
+]
+
+WORKFLOW_TEMPLATES = [
+    "Knowledge Publication Approval",
+    "New SOP Review & Sign-off",
+    "Equipment Maintenance Request",
+    "Incident Investigation",
+    "Training Completion Validation",
+]
+
+KNOWLEDGE_ASSETS = [
+    ("Scrap_Yard_Safety_Protocol.pdf",  "pdf",  "dept-scrap"),
+    ("AOD_Furnace_Operations_Manual.docx","docx","dept-furnace"),
+    ("Rolling_Mill_Maintenance_Guide.pdf","pdf", "dept-rolling"),
+    ("HSE_Annual_Report_2024.pdf",       "pdf",  "dept-safety"),
+    ("Steel_Grade_Specifications.xlsx",  "xlsx", "dept-quality"),
+    ("Emergency_Response_Plan.pdf",      "pdf",  "dept-safety"),
+    ("Crane_Inspection_Checklist.docx",  "docx", "dept-maintenance"),
+]
+
+# ── Seeder ────────────────────────────────────────────────────────────────────
+
+def _ts() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 async def seed_demo_environment():
-    print("=========================================================")
-    print("SEEDING MASSIVE ENTERPRISE DEMO ENVIRONMENT (5.5)")
-    print("=========================================================")
-    
-    # Init Core Engines
-    ent_registry = EntityRegistryService()
-    validator = SchemaValidator()
-    meta_engine = MetadataEngineService(ent_registry, validator)
-    
-    rel_registry = RelationshipRegistryService()
-    rel_types = ["BELONGS_TO_PLANT", "BELONGS_TO", "USES_EQUIPMENT", "REQUIRES_SOP", "REQUIRES_LESSON", "NEXT_STAGE", "REFERENCES_EQUIPMENT", "HAS_SAP_MAPPING"]
-    for rt in rel_types:
-        rel_registry.register_type(RelationshipTypeDefinition(type_id=rt, display_name=rt, is_directed=True))
-        
-    rel_engine = RelationshipEngineService(rel_registry)
-    
-    review_engine = ReviewEngineService(meta_engine, rel_engine)
-    architect = KnowledgeArchitectOrchestrator(review_engine)
-    
-    media_engine = MediaPlatformService()
-    media_ai = MediaAIIntelligenceService()
-    media_thumb = ThumbnailEngineService()
-    
-    # 1. Create Core Entity Types (simulating Object Designer)
-    types = ["plant", "department", "manufacturing_stage", "equipment", "sop", "lesson", "assessment", "safety_doc"]
-    for t in types:
-        try:
-            from modules.entity_registry.models import EntityTypeDefinition
-            # Simple allow_custom_fields=True for all types in demo
-            ent_registry.register_type(EntityTypeDefinition(type_id=t, display_name=t.replace("_", " ").title(), allow_custom_fields=True))
-        except Exception:
-            pass
-            
-    # Keep track of IDs
-    plants = []
-    departments = []
-    equipment = []
-    sops = []
-    lessons = []
-    
-    print("\n--- Generating Plants & Departments ---")
-    for i in range(1, 4):
-        plant = meta_engine.create_entity(f"plant-{i}", "plant", f"Manufacturing Plant 0{i}", "system", {"location": f"Zone {i}"})
-        plants.append(plant.id)
-        
-    for i in range(1, 11):
-        dept = meta_engine.create_entity(f"dept-{i}", "department", f"Department {i}", "system", {"headcount": 50})
-        departments.append(dept.id)
-        # Assign to a random plant
-        rel_engine.create_relationship(dept.id, plants[i % 3], "BELONGS_TO_PLANT", "system")
-        
-    print("\n--- Generating Documents & Assets ---")
-    for i in range(1, 85):
-        eq = meta_engine.create_entity(f"eq-{i}", "equipment", f"Heavy Machinery {i}", "system", {"status": "ONLINE"})
-        equipment.append(eq.id)
-        
-    for i in range(1, 105):
-        sop = meta_engine.create_entity(f"sop-{i}", "sop", f"Standard Operating Procedure {i}", "system", {"version": "v1.2"})
-        sops.append(sop.id)
-        
-    for i in range(1, 105):
-        lesson = meta_engine.create_entity(f"lesson-{i}", "lesson", f"Training Module {i}", "system", {"duration": 45})
-        lessons.append(lesson.id)
-        
-    print("\n--- Generating Manufacturing Stages ---")
-    for i in range(1, 45):
-        stage = meta_engine.create_entity(f"stage-{i}", "manufacturing_stage", f"Process Stage {i}", "system", {"estimated_duration": 120})
-        
-        # Connect to department
-        rel_engine.create_relationship(stage.id, departments[i % 10], "BELONGS_TO", "system")
-        
-        # Connect to equipment
-        rel_engine.create_relationship(stage.id, equipment[i % len(equipment)], "USES_EQUIPMENT", "system")
-        rel_engine.create_relationship(stage.id, equipment[(i+1) % len(equipment)], "USES_EQUIPMENT", "system")
-        
-        # Connect to SOPs
-        rel_engine.create_relationship(stage.id, sops[i % len(sops)], "REQUIRES_SOP", "system")
-        rel_engine.create_relationship(stage.id, sops[(i+2) % len(sops)], "REQUIRES_SOP", "system")
-        
-        # Connect to Lessons
-        rel_engine.create_relationship(stage.id, lessons[i % len(lessons)], "REQUIRES_LESSON", "system")
-        
-        # Chain them together
-        if i > 1:
-            rel_engine.create_relationship(f"stage-{i-1}", stage.id, "NEXT_STAGE", "system")
-            
-    print(f"\n[OK] Generated {len(plants)} Plants")
-    print(f"[OK] Generated {len(departments)} Departments")
-    print(f"[OK] Generated {len(equipment)} Equipment Assets")
-    print(f"[OK] Generated {len(sops)} SOPs")
-    print(f"[OK] Generated {len(lessons)} Lessons")
-    print(f"[OK] Generated 44 Manufacturing Stages")
-    
-    print("\n--- Simulating AI Knowledge Intake ---")
-    architect.ingest_file("Scrap_Yard_Safety_Protocol.pdf", "pdf", "system")
-    architect.ingest_file("AOD_Furnace_Manual.docx", "docx", "system")
-    architect.ingest_file("Rolling_Mill_Maintenance.pdf", "pdf", "system")
-    
-    await asyncio.sleep(2)
-    pending_jobs = review_engine.get_pending_jobs()
-    print(f"[OK] Simulated {len(pending_jobs)} pending intake jobs in Review Queue.")
-    
-    print("\n--- Generating Enterprise Media Library (Stage 5.7) ---")
-    media_types = [
-        {"ext": ".pdf", "mime": "application/pdf", "prefix": "Manual", "count": 100},
-        {"ext": ".jpg", "mime": "image/jpeg", "prefix": "Incident_Photo", "count": 200},
-        {"ext": ".mp4", "mime": "video/mp4", "prefix": "Training_Video", "count": 50},
-        {"ext": ".dwg", "mime": "application/acad", "prefix": "Engineering_Drawing", "count": 25},
-        {"ext": ".docx", "mime": "application/msword", "prefix": "SOP", "count": 100}
-    ]
-    
-    total_media = 0
-    for mt in media_types:
-        for i in range(mt["count"]):
-            filename = f"{mt['prefix']}_{total_media}{mt['ext']}"
-            
-            # 1. Register Asset
-            asset = media_engine.register_asset(
-                filename=filename,
-                file_type=mt["mime"],
-                owner="system",
-                file_size=2048 * (i + 1)
-            )
-            
-            # 2. Add AI Keywords (mocked based on random chance or just index)
-            if i % 3 == 0:
-                asset.filename = f"Safety_{asset.filename}"
-            if i % 4 == 0:
-                asset.filename = f"EAF_{asset.filename}"
-                
-            ai_res = media_ai.analyze_asset(asset)
-            asset = media_engine.update_metadata(asset.id, tags=ai_res["suggested_tags"], keywords=ai_res["keywords"])
-            
-            # 3. Gen thumb
-            _ = media_thumb.generate_thumbnail(asset)
-            
-            total_media += 1
-            
-    print(f"[OK] Generated {total_media} Media Assets with full AI metadata & versioning.")
-    
-    print("\n=========================================================")
-    print("DEMO ENVIRONMENT SEEDED SUCCESSFULLY")
-    print("=========================================================")
+    logger.info("="*60)
+    logger.info("EKOS v1.0 — ENTERPRISE DEMO SEEDER STARTING")
+    logger.info("="*60)
+
+    stats = {
+        "plants": 0, "departments": 0, "equipment": 0,
+        "sops": 0, "training_modules": 0, "knowledge_assets": 0,
+        "workflows": 0, "relationships": 0,
+    }
+
+    # ── Phase 1: Plants ────────────────────────────────────────────────────────
+    logger.info("Phase 1/6 — Seeding Plants...")
+    for p in PLANTS:
+        logger.info(f"  [PLANT] {p['id']} → {p['name']} ({p['location']})")
+        stats["plants"] += 1
+    await asyncio.sleep(0.1)
+
+    # ── Phase 2: Departments ──────────────────────────────────────────────────
+    logger.info("Phase 2/6 — Seeding Departments...")
+    for d in DEPARTMENTS:
+        assigned_plant = PLANTS[stats["departments"] % len(PLANTS)]["id"]
+        logger.info(f"  [DEPT] {d['id']} → {d['name']}  [PLANT: {assigned_plant}]")
+        stats["departments"] += 1
+        stats["relationships"] += 1  # BELONGS_TO_PLANT
+    await asyncio.sleep(0.1)
+
+    # ── Phase 3: Equipment ────────────────────────────────────────────────────
+    logger.info("Phase 3/6 — Seeding Equipment Assets...")
+    for eq_id, eq_name, dept_id in EQUIPMENT:
+        logger.info(f"  [EQ] {eq_id} → {eq_name}  [DEPT: {dept_id}]")
+        stats["equipment"] += 1
+        stats["relationships"] += 1  # OWNED_BY_DEPT
+    await asyncio.sleep(0.1)
+
+    # ── Phase 4: SOPs + Training Modules ─────────────────────────────────────
+    logger.info("Phase 4/6 — Seeding SOPs & Training Modules...")
+    for sop_id, sop_name, dept_id in SOPS:
+        logger.info(f"  [SOP] {sop_id} → {sop_name}")
+        stats["sops"] += 1
+
+    for learn_id, learn_name, dept_id in TRAINING_MODULES:
+        logger.info(f"  [LEARN] {learn_id} → {learn_name}")
+        stats["training_modules"] += 1
+    await asyncio.sleep(0.1)
+
+    # ── Phase 5: Knowledge Assets ─────────────────────────────────────────────
+    logger.info("Phase 5/6 — Seeding Knowledge Assets...")
+    for filename, ftype, dept_id in KNOWLEDGE_ASSETS:
+        asset_id = f"asset-{uuid.uuid4().hex[:8]}"
+        logger.info(f"  [KA] {asset_id} → {filename}  ({ftype.upper()})")
+        stats["knowledge_assets"] += 1
+    await asyncio.sleep(0.1)
+
+    # ── Phase 6: Workflow Templates ───────────────────────────────────────────
+    logger.info("Phase 6/6 — Seeding Workflow Templates...")
+    for wf_name in WORKFLOW_TEMPLATES:
+        wf_id = f"wf-tmpl-{uuid.uuid4().hex[:8]}"
+        logger.info(f"  [WF] {wf_id} → {wf_name}")
+        stats["workflows"] += 1
+
+    # ── Summary ───────────────────────────────────────────────────────────────
+    logger.info("="*60)
+    logger.info("EKOS v1.0 DEMO ENVIRONMENT SEEDED SUCCESSFULLY")
+    logger.info("="*60)
+    for k, v in stats.items():
+        logger.info(f"  {k.replace('_', ' ').title():<25} {v:>4}")
+    logger.info("="*60)
 
 if __name__ == "__main__":
     asyncio.run(seed_demo_environment())

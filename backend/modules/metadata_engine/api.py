@@ -7,6 +7,7 @@ from .service import MetadataEngineService
 from modules.entity_framework.models import EnterpriseEntity
 from modules.entity_registry.models import EntityTypeDefinition
 from modules.auth.middleware import require_authenticated_user
+from modules.schema_engine.generator import SchemaGenerator
 
 router = APIRouter(prefix="/api/v1/metadata", tags=["Enterprise Metadata Engine"])
 
@@ -65,6 +66,59 @@ async def delete_metadata_type(
     if not success:
         raise HTTPException(status_code=404, detail="Type not found")
     return {"message": "Deleted successfully"}
+
+@router.post("/types/{type_id}/publish", response_model=EntityTypeDefinition)
+async def publish_metadata_type(
+    type_id: str,
+    engine: MetadataEngineService = Depends(lambda: container.resolve(MetadataEngineService)),
+    auth_context: dict = Depends(require_authenticated_user)
+):
+    """Publish a Draft Metadata Type."""
+    return engine.publish_type(type_id, auth_context.get("sub", "system"))
+
+@router.post("/types/{type_id}/rollback/{version}", response_model=EntityTypeDefinition)
+async def rollback_metadata_type(
+    type_id: str,
+    version: int,
+    engine: MetadataEngineService = Depends(lambda: container.resolve(MetadataEngineService)),
+    auth_context: dict = Depends(require_authenticated_user)
+):
+    """Rollback a Metadata Type to a previous version."""
+    return engine.rollback_type(type_id, version, auth_context.get("sub", "system"))
+
+@router.get("/types/{type_id}/versions", response_model=List[EntityTypeDefinition])
+async def list_metadata_type_versions(
+    type_id: str,
+    engine: MetadataEngineService = Depends(lambda: container.resolve(MetadataEngineService))
+):
+    """List version history for a Metadata Type."""
+    if not hasattr(engine.repository, 'get_type_versions'):
+        raise HTTPException(status_code=501, detail="Version history not supported by repository.")
+    return engine._call('get_type_versions', type_id)
+
+@router.get("/types/{type_id}/dependencies", response_model=Dict[str, Any])
+async def get_metadata_type_dependencies(
+    type_id: str,
+    engine: MetadataEngineService = Depends(lambda: container.resolve(MetadataEngineService))
+):
+    """Get dependencies for a Metadata Type."""
+    return engine.analyze_dependencies(type_id)
+
+@router.get("/types/{type_id}/schema/{schema_type}", response_model=Dict[str, Any])
+async def get_metadata_type_schema(
+    type_id: str,
+    schema_type: str,
+    engine: MetadataEngineService = Depends(lambda: container.resolve(MetadataEngineService))
+):
+    """Generate dynamic JSON Schema or UI Schema for a Metadata Type."""
+    type_def = engine.get_type(type_id)
+    generator = SchemaGenerator()
+    if schema_type == "validation":
+        return generator.generate_json_schema(type_def)
+    elif schema_type == "ui":
+        return generator.generate_ui_schema(type_def)
+    else:
+        raise HTTPException(status_code=400, detail="Invalid schema type. Use 'validation' or 'ui'.")
 
 # ---------------------------------------------------------
 # OBJECT APIs

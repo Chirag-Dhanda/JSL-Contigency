@@ -1,7 +1,7 @@
 import logging
 import asyncio
 
-from modules.entity_registry.service import EntityRegistryService
+from modules.metadata_engine.repository import MetadataRepository
 from modules.entity_registry.models import EntityTypeDefinition
 from modules.schema_engine.validator import SchemaValidator
 from modules.metadata_engine.service import MetadataEngineService
@@ -21,9 +21,9 @@ async def main():
     print("=========================================================")
     
     # Init Core Engines
-    ent_registry = EntityRegistryService()
+    repo = MetadataRepository()
     validator = SchemaValidator()
-    meta_engine = MetadataEngineService(ent_registry, validator)
+    meta_engine = MetadataEngineService(repo, validator)
     
     rel_registry = RelationshipRegistryService()
     rel_registry.register_type(RelationshipTypeDefinition(type_id="NEXT_STAGE", display_name="Next Stage", is_directed=True))
@@ -72,7 +72,7 @@ async def main():
     print("\n--- 2. Testing Process Runtime (Compile Flow) ---")
     
     # Ensure types exist
-    ent_registry.register_type(EntityTypeDefinition(type_id="manufacturing_stage", display_name="Stage", allow_custom_fields=True))
+    meta_engine.register_type(EntityTypeDefinition(type_id="manufacturing_stage", display_name="Stage", allow_custom_fields=True))
     
     # Publish the flow
     builder_svc.publish_flow(draft_flow.id, "u-master-editor")

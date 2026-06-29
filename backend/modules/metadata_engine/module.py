@@ -1,7 +1,7 @@
 from core.module import BaseModule
 from core.di import ServiceContainer
 from .service import MetadataEngineService
-from .repository import MetadataRepository
+from .pg_repository import PostgresMetadataRepository
 from modules.schema_engine.validator import SchemaValidator
 from logging import getLogger
 
@@ -21,7 +21,7 @@ class MetadataEngineModule(BaseModule):
         """Register Metadata Engine services into the global DI container."""
         logger.debug("Registering Metadata Engine Services...")
         
-        repository = MetadataRepository()
+        repository = PostgresMetadataRepository()
         validator = SchemaValidator()
         
         service = MetadataEngineService(repository=repository, validator=validator)

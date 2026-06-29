@@ -13,7 +13,7 @@ class HyperlinkRequest(BaseModel):
 
 @router.get("/{entity_id}", response_model=Dict[str, Any])
 async def get_discovery_profile(entity_id: str):
-    discovery_service: DiscoveryEngineService = container.resolve("DiscoveryEngineService")
+    discovery_service: DiscoveryEngineService = container.resolve(DiscoveryEngineService)
     try:
         return discovery_service.get_discovery_profile(entity_id)
     except Exception as e:
@@ -24,6 +24,6 @@ async def inject_hyperlinks(req: HyperlinkRequest):
     """
     Utility endpoint to test hyperlink injection.
     """
-    hyperlink_service: HyperlinkEngineService = container.resolve("HyperlinkEngineService")
+    hyperlink_service: HyperlinkEngineService = container.resolve(HyperlinkEngineService)
     linked_text = hyperlink_service.inject_hyperlinks(req.text)
     return {"linked_text": linked_text}

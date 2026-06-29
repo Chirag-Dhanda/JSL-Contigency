@@ -24,6 +24,7 @@ class EntityTypeDefinition(BaseModel):
     """
     type_id: str = Field(..., description="Unique internal identifier (e.g., 'plc_device')")
     display_name: str = Field(..., description="Human readable name (e.g., 'PLC Device')")
+    internal_name: str = Field(default="", description="Internal system name, usually mirrors type_id")
     description: Optional[str] = None
     icon: Optional[str] = Field(default="fa-cube")
     category: Optional[str] = Field(default="General")
@@ -41,6 +42,30 @@ class EntityTypeDefinition(BaseModel):
     
     # Default values for new entities of this type
     default_metadata: Dict[str, Any] = Field(default_factory=dict)
+    
+    # Relationships
+    allowed_relationships: List[str] = Field(
+        default_factory=list,
+        description="List of Relationship Type IDs allowed for this entity type."
+    )
+    
+    # Presentation and Configuration
+    ui_schema: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="JSON Schema UI configurations for dynamic rendering."
+    )
+    search_config: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="Configuration for how this entity type is indexed and searched."
+    )
+    permissions_profile: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="Role-based access control default profiles for entities of this type."
+    )
+    ai_visibility: bool = Field(
+        default=True,
+        description="Whether AI agents can read/index entities of this type by default."
+    )
     
     # Configuration
     is_active: bool = Field(default=True)

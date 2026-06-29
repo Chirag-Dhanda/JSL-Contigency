@@ -59,3 +59,16 @@ async def get_entity_relationships(
     engine: RelationshipEngineService = Depends(lambda: container.resolve(RelationshipEngineService))
 ):
     return engine.get_relationships_for_entity(entity_id, direction)
+
+@router.get("/entity/{entity_id}/impact")
+async def get_impact_radius(
+    entity_id: str,
+    depth: int = 3,
+    engine: RelationshipEngineService = Depends(lambda: container.resolve(RelationshipEngineService))
+):
+    from modules.relationship_engine.analyzer import DependencyAnalyzer
+    from modules.relationship_engine.neo4j_repository import Neo4jRepository
+    
+    # In a full DI setup, this would be injected.
+    analyzer = DependencyAnalyzer(container.resolve(Neo4jRepository))
+    return await analyzer.get_impact_radius(entity_id, depth)

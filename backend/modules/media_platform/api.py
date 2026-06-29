@@ -28,9 +28,9 @@ async def upload_asset(req: UploadAssetRequest):
     Mocks an upload and synchronously runs the AI processing.
     In reality, file upload would go to S3 and AI processing would be a background task.
     """
-    media_service: MediaPlatformService = container.resolve("MediaPlatformService")
-    ai_service: MediaAIIntelligenceService = container.resolve("MediaAIIntelligenceService")
-    thumbnail_engine: ThumbnailEngineService = container.resolve("ThumbnailEngineService")
+    media_service: MediaPlatformService = container.resolve(MediaPlatformService)
+    ai_service: MediaAIIntelligenceService = container.resolve(MediaAIIntelligenceService)
+    thumbnail_engine: ThumbnailEngineService = container.resolve(ThumbnailEngineService)
     
     # 1. Register Asset
     asset = media_service.register_asset(req.filename, req.file_type, req.owner, req.file_size)
@@ -51,7 +51,7 @@ async def upload_asset(req: UploadAssetRequest):
 
 @router.post("/search", response_model=List[MediaAsset])
 async def search_assets(req: SearchMediaRequest):
-    media_service: MediaPlatformService = container.resolve("MediaPlatformService")
+    media_service: MediaPlatformService = container.resolve(MediaPlatformService)
     
     filter_params = MediaFilter(
         file_types=req.file_types,
@@ -63,7 +63,7 @@ async def search_assets(req: SearchMediaRequest):
 
 @router.get("/{asset_id}", response_model=MediaAsset)
 async def get_asset(asset_id: str):
-    media_service: MediaPlatformService = container.resolve("MediaPlatformService")
+    media_service: MediaPlatformService = container.resolve(MediaPlatformService)
     try:
         return media_service.get_asset(asset_id)
     except Exception as e:

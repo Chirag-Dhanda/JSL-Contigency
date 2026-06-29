@@ -12,7 +12,7 @@ class AuditEngineService:
         self._ledger: List[AuditRecord] = []
         logger.info("Audit Engine Initialized.")
 
-    def record_action(self, user_id: str, entity_id: str, module: str, action: str, old_value: dict = None, new_value: dict = None, reason: str = None) -> AuditRecord:
+    def record_action(self, user_id: str, entity_id: str, module: str, action: str, old_value: Optional[dict] = None, new_value: Optional[dict] = None, reason: Optional[str] = None) -> AuditRecord:
         record = AuditRecord(
             user_id=user_id,
             entity_id=entity_id,

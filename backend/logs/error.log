@@ -1364,3 +1364,237 @@ ValueError: This is a raw python exception!
 2026-06-27 16:07:26,109 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
 2026-06-27 16:07:26,119 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
 2026-06-27 16:07:26,125 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:51:26,387 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:51:27,700 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:51:28,032 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:51:28,037 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,040 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,043 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,046 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,049 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,052 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,055 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:51:28,060 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,063 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,065 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,068 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,071 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,073 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,076 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:04,672 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:52:05,388 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:52:05,648 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:52:05,651 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,653 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,655 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,658 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,660 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,663 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,666 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:52:05,670 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,672 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,675 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,677 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,679 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,682 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,684 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:41,298 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:53:42,002 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:53:42,290 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:53:42,293 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,295 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,297 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,300 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,302 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,305 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,309 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:53:42,313 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,315 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,318 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,320 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,323 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,325 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,327 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-29 13:17:15,913 | ERROR    | [fastapi] | ReqID:- | User:- | Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-06-29 13:25:30,651 | ERROR    | [fastapi] | ReqID:- | User:- | Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-06-29 13:46:33,435 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Resolution failed for GovernanceEngine
+2026-06-29 13:46:54,089 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Resolution failed for GovernanceEngine

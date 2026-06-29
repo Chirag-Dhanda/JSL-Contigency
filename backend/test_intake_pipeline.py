@@ -1,7 +1,7 @@
 import logging
 import asyncio
 
-from modules.entity_registry.service import EntityRegistryService
+from modules.metadata_engine.repository import MetadataRepository
 from modules.entity_registry.models import EntityTypeDefinition
 from modules.schema_engine.validator import SchemaValidator
 from modules.metadata_engine.service import MetadataEngineService
@@ -20,14 +20,14 @@ async def main():
     print("=========================================================")
     
     # Init Core Engines
-    ent_registry = EntityRegistryService()
+    repo = MetadataRepository()
     validator = SchemaValidator()
-    meta_engine = MetadataEngineService(ent_registry, validator)
+    meta_engine = MetadataEngineService(repo, validator)
     
     # Types for test
-    ent_registry.register_type(EntityTypeDefinition(type_id="sop", display_name="SOP", allow_custom_fields=True))
-    ent_registry.register_type(EntityTypeDefinition(type_id="equipment", display_name="Equipment", allow_custom_fields=True))
-    ent_registry.register_type(EntityTypeDefinition(type_id="sap_unresolved_mapping", display_name="SAP Placeholder", allow_custom_fields=True))
+    meta_engine.register_type(EntityTypeDefinition(type_id="sop", display_name="SOP", allow_custom_fields=True))
+    meta_engine.register_type(EntityTypeDefinition(type_id="equipment", display_name="Equipment", allow_custom_fields=True))
+    meta_engine.register_type(EntityTypeDefinition(type_id="sap_unresolved_mapping", display_name="SAP Placeholder", allow_custom_fields=True))
     
     rel_registry = RelationshipRegistryService()
     rel_registry.register_type(RelationshipTypeDefinition(type_id="REFERENCES_EQUIPMENT", display_name="References", is_directed=True))
@@ -65,7 +65,7 @@ async def main():
     print(f"\n--- 4. Verifying Knowledge Graph ---")
     
     # Check if entities exist in metadata engine
-    live_entities = list(meta_engine._entities.values())
+    live_entities = meta_engine.list_entities()
     print(f"[OK] Total live entities committed to graph: {len(live_entities)}")
     for live_ent in live_entities:
         print(f"  -> {live_ent.id} ({live_ent.display_name})")

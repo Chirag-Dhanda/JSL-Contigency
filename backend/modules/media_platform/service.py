@@ -1,6 +1,6 @@
 import logging
 from typing import List, Dict, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from .models import MediaAsset, AssetVersion, MediaFilter
 from exceptions.base import NotFoundException
 
@@ -15,7 +15,7 @@ class MediaPlatformService:
         self._assets: Dict[str, MediaAsset] = {}
         logger.info("Media Platform Service Initialized.")
 
-    def register_asset(self, filename: str, file_type: str, owner: str, file_size: int, title: str = None) -> MediaAsset:
+    def register_asset(self, filename: str, file_type: str, owner: str, file_size: int, title: Optional[str] = None) -> MediaAsset:
         asset = MediaAsset(
             filename=filename,
             file_type=file_type,
@@ -71,12 +71,12 @@ class MediaPlatformService:
             change_summary=summary
         )
         asset.versions.append(ver)
-        asset.updated_at = datetime.utcnow()
+        asset.updated_at = datetime.now(timezone.utc)
         
         logger.info(f"Added version {asset.current_version} to {asset.id}")
         return asset
         
-    def update_metadata(self, asset_id: str, tags: List[str] = None, keywords: List[str] = None, entity_id: str = None) -> MediaAsset:
+    def update_metadata(self, asset_id: str, tags: Optional[List[str]] = None, keywords: Optional[List[str]] = None, entity_id: Optional[str] = None) -> MediaAsset:
         asset = self.get_asset(asset_id)
         if tags is not None:
             asset.tags = tags
@@ -85,5 +85,5 @@ class MediaPlatformService:
         if entity_id is not None:
             asset.entity_id = entity_id
             
-        asset.updated_at = datetime.utcnow()
+        asset.updated_at = datetime.now(timezone.utc)
         return asset

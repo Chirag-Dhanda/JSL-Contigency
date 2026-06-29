@@ -14,19 +14,20 @@ def main():
     
     # 1. Run seeder to get a massive populated environment
     print("\n[INFO] Initializing massive graph from seeder...")
-    from modules.entity_registry.service import EntityRegistryService
+    from modules.metadata_engine.repository import MetadataRepository
     from modules.schema_engine.validator import SchemaValidator
     from modules.entity_registry.models import EntityTypeDefinition
     from modules.relationship_registry.service import RelationshipRegistryService
     from modules.relationship_registry.models import RelationshipTypeDefinition
     
-    ent_registry = EntityRegistryService()
+    repo = MetadataRepository()
+    validator = SchemaValidator()
+    meta_engine = MetadataEngineService(repo, validator)
+    
     types = ["plant", "department", "manufacturing_stage", "equipment", "sop", "lesson", "assessment", "safety_doc"]
     for t in types:
-        ent_registry.register_type(EntityTypeDefinition(type_id=t, display_name=t.capitalize(), json_schema={}))
-        
-    validator = SchemaValidator()
-    meta_engine = MetadataEngineService(ent_registry, validator)
+        meta_engine.register_type(EntityTypeDefinition(type_id=t, display_name=t.capitalize(), json_schema={}))
+
     
     rel_registry = RelationshipRegistryService()
     rel_types = ["BELONGS_TO", "USES_EQUIPMENT", "REQUIRES_SOP", "REQUIRES_LESSON", "REQUIRES_EQUIPMENT"]

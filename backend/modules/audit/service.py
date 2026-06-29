@@ -13,7 +13,7 @@ class AuditService:
         # In-memory storage for functional testing
         self._ledger: list[AuditEvent] = []
         
-    async def log_event(self, action: str, actor_id: str, target_resource_id: Optional[str] = None, metadata: Dict[str, Any] = None) -> None:
+    async def log_event(self, action: str, actor_id: str, target_resource_id: Optional[str] = None, metadata: Optional[Dict[str, Any]] = None) -> None:
         event = AuditEvent(
             id=str(uuid.uuid4()),
             action=action,

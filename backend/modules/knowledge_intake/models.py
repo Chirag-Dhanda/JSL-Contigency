@@ -1,7 +1,7 @@
 from typing import List, Dict, Any, Optional
 from pydantic import BaseModel, Field
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 class ProposedEntity(BaseModel):
     id: str = Field(default_factory=lambda: f"prop-ent-{uuid.uuid4().hex[:8]}")

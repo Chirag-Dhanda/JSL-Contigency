@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 class AssetVersion(BaseModel):
     version_id: str = Field(default_factory=lambda: f"ver-{uuid.uuid4().hex[:8]}")

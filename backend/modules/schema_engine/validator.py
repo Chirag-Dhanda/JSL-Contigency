@@ -12,6 +12,34 @@ class SchemaValidator:
     defined in the Entity Registry.
     """
     
+    def validate_type_definition(self, schema_def: EntityTypeDefinition) -> bool:
+        """
+        Validates the structure and integrity of the EntityTypeDefinition itself.
+        Used before transitioning a definition from Draft to Approved/Published.
+        """
+        if not schema_def.type_id.strip():
+            raise SystemException(message="Type ID cannot be empty.")
+        if not schema_def.display_name.strip():
+            raise SystemException(message="Display Name cannot be empty.")
+        
+        # Check attribute naming rules
+        for key, rule in schema_def.metadata_schema.items():
+            if not re.match(r'^[a-z0-9_]+$', key):
+                raise SystemException(message=f"Attribute key '{key}' must be lowercase alphanumeric with underscores.")
+            
+            # Check attribute consistency (e.g. enum_values for dropdown/multi_select)
+            if rule.field_type in ["dropdown", "multi_select"] and not rule.enum_values:
+                raise SystemException(message=f"Field '{key}' of type {rule.field_type} must define enum_values.")
+            
+            # Check default value matches type
+            if rule.default_value is not None:
+                try:
+                    self._validate_field(key, rule.default_value, rule)
+                except SystemException as e:
+                    raise SystemException(message=f"Invalid default_value for '{key}': {str(e)}")
+                    
+        return True
+
     def validate(self, metadata: Dict[str, Any], schema_def: EntityTypeDefinition) -> bool:
         """
         Validates the entire metadata payload against the schema definition.

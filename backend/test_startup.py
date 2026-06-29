@@ -314,6 +314,7 @@ with TestClient(app, raise_server_exceptions=False) as client:
         department="Melting",
         difficulty=DifficultyLevel.INTERMEDIATE,
         tags=["safety", "eaf", "high-voltage"],
+        author="u-admin-1",
         author_id="u-admin-1",
         created_at=datetime.now(timezone.utc),
         updated_at=datetime.now(timezone.utc)

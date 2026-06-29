@@ -3538,3 +3538,769 @@ ized.
 2026-06-27 16:07:26,109 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
 2026-06-27 16:07:26,119 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
 2026-06-27 16:07:26,125 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: 127.0.0.1
+2026-06-27 16:51:24,063 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: TestModule (v1.0.0)
+2026-06-27 16:51:24,073 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-27 16:51:26,382 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-27 16:51:26,382 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-27 16:51:26,382 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-27 16:51:26,383 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-27 16:51:26,384 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-27 16:51:26,384 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Events (v1.0.0)
+2026-06-27 16:51:26,384 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-27 16:51:26,384 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-27 16:51:26,384 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-27 16:51:26,385 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-27 16:51:26,386 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-27 16:51:26,387 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:51:26,387 | INFO     | [Application] | ReqID:- | User:- | Duplicate registration safely prevented: Service DummyService is already registered.
+2026-06-27 16:51:26,903 | INFO     | [MetadataEngine] | ReqID:- | User:- | Metadata Engine Core Initialized.
+2026-06-27 16:51:26,903 | INFO     | [Application] | ReqID:- | User:- | TestModule Initialized!
+2026-06-27 16:51:26,903 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Initialized.
+2026-06-27 16:51:26,903 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Initialized.
+2026-06-27 16:51:26,904 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Initialized.
+2026-06-27 16:51:26,905 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Initialized.
+2026-06-27 16:51:26,906 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Initialized.
+2026-06-27 16:51:26,906 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Initialized with default SS Journey.
+2026-06-27 16:51:26,906 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Initialized.
+2026-06-27 16:51:26,906 | INFO     | [VectorDBModule] | ReqID:- | User:- | Initializing VectorDB Module...
+2026-06-27 16:51:26,907 | INFO     | [VectorDBClient] | ReqID:- | User:- | Initializing Persistent ChromaDB Client at D:\JSL Contigency\backend\..\storage\chromadb
+2026-06-27 16:51:27,651 | INFO     | [VectorDBClient] | ReqID:- | User:- | ChromaDB Client initialized successfully.
+2026-06-27 16:51:27,660 | INFO     | [CollectionManager] | ReqID:- | User:- | Successfully registered 8 default collections.
+2026-06-27 16:51:27,661 | INFO     | [VectorDBModule] | ReqID:- | User:- | VectorDB Module initialized successfully.
+2026-06-27 16:51:27,661 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Initializing Index Management Module...
+2026-06-27 16:51:27,661 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Initializing Embeddings Module...
+2026-06-27 16:51:27,661 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Embeddings Module initialized successfully.
+2026-06-27 16:51:27,661 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Initializing Synchronization Module...
+2026-06-27 16:51:27,661 | INFO     | [ConversationsModule] | ReqID:- | User:- | Initializing Conversations Module...
+2026-06-27 16:51:27,662 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Initialized.
+2026-06-27 16:51:27,662 | INFO     | [LifecycleManager] | ReqID:- | User:- | Enterprise Application Lifecycle Ready.
+2026-06-27 16:51:27,666 | INFO     | [DemoSeeder] | ReqID:- | User:- | Seeding Enterprise Demo Metadata...
+2026-06-27 16:51:27,666 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: machine
+2026-06-27 16:51:27,666 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: department
+2026-06-27 16:51:27,667 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: knowledge_doc
+2026-06-27 16:51:27,668 | INFO     | [DemoSeeder] | ReqID:- | User:- | Demo Metadata Seeding Complete.
+2026-06-27 16:51:27,689 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.NOT_FOUND - Resource Not Found: This is a test not found exception. on path /api/v1/test/error/not-found
+2026-06-27 16:51:27,691 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/not-found "HTTP/1.1 404 Not Found"
+2026-06-27 16:51:27,700 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:51:27,702 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/unhandled "HTTP/1.1 500 Internal Server Error"
+2026-06-27 16:51:27,705 | INFO     | [ExceptionHandler] | ReqID:- | User:- | Validation Error on path /api/v1/test/error/validation
+2026-06-27 16:51:27,706 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/test/error/validation "HTTP/1.1 422 Unprocessable Entity"
+2026-06-27 16:51:27,709 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 200 OK"
+2026-06-27 16:51:27,714 | INFO     | [AuthService] | ReqID:- | User:- | Attempting login for user: admin
+2026-06-27 16:51:28,032 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:51:28,033 | INFO     | [SessionManager] | ReqID:- | User:- | Auth Audit: User admin -> FAILED_PASSWORD
+2026-06-27 16:51:28,034 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.UNAUTHORIZED - Unauthorized: Invalid credentials. on path /api/v1/auth/login
+2026-06-27 16:51:28,035 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 401 Unauthorized"
+2026-06-27 16:51:28,037 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,038 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,040 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,041 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/change-password "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,043 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,044 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,046 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,047 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,049 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,050 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/logout "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,052 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,053 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,055 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:51:28,056 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_CREATED by u-sales-1 targeting 12f90d11-0b30-46dc-a4e8-39578b7a0e92
+2026-06-27 16:51:28,056 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request 12f90d11-0b30-46dc-a4e8-39578b7a0e92 created by u-sales-1. (Awaiting Manager Approval)
+2026-06-27 16:51:28,056 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_APPROVED by u-admin-1 targeting 12f90d11-0b30-46dc-a4e8-39578b7a0e92
+2026-06-27 16:51:28,056 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request 12f90d11-0b30-46dc-a4e8-39578b7a0e92 APPROVED by u-admin-1.
+2026-06-27 16:51:28,057 | INFO     | [AuthorizationPipeline] | ReqID:- | User:- | Access granted via temporary exception 12f90d11-0b30-46dc-a4e8-39578b7a0e92 for user u-sales-1
+2026-06-27 16:51:28,057 | INFO     | [EventBus] | ReqID:- | User:- | Publishing USER_REGISTERED to 1 handlers.
+2026-06-27 16:51:28,058 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | IN-APP Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:51:28,058 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | EMAIL Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:51:28,060 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,061 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test?search=%3Cscript%3Ealert(1)%3C/script%3E&action=DROP%20TABLE%20users "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,063 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,064 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,065 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,067 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,068 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,069 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,071 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,072 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,073 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,074 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,076 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:51:28,076 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:51:28,077 | INFO     | [RoadmapService] | ReqID:- | User:- | Initialized Roadmap rm-onboard for user u-test-88
+2026-06-27 16:51:28,077 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-welcome on roadmap rm-onboard
+2026-06-27 16:51:28,077 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-safety on roadmap rm-onboard
+2026-06-27 16:51:28,078 | INFO     | [LifecycleManager] | ReqID:- | User:- | Commencing Enterprise Application Graceful Shutdown...
+2026-06-27 16:51:28,079 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Shutdown.
+2026-06-27 16:51:28,079 | INFO     | [ConversationsModule] | ReqID:- | User:- | Shutting down Conversations Module...
+2026-06-27 16:51:28,079 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Shutting down Synchronization Module...
+2026-06-27 16:51:28,079 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Shutting down Embeddings Module...
+2026-06-27 16:51:28,079 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Shutting down Index Management Module...
+2026-06-27 16:51:28,079 | INFO     | [VectorDBModule] | ReqID:- | User:- | Shutting down VectorDB Module...
+2026-06-27 16:51:28,079 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Shutdown.
+2026-06-27 16:51:28,079 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Shutdown.
+2026-06-27 16:51:28,080 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Shutdown.
+2026-06-27 16:51:28,081 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Shutdown.
+2026-06-27 16:51:28,082 | INFO     | [Application] | ReqID:- | User:- | TestModule Shutdown Cleanly!
+2026-06-27 16:51:28,082 | INFO     | [LifecycleManager] | ReqID:- | User:- | Application Shutdown Complete.
+2026-06-27 16:52:03,722 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: TestModule (v1.0.0)
+2026-06-27 16:52:03,738 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-27 16:52:04,668 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-27 16:52:04,668 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-27 16:52:04,668 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-27 16:52:04,668 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Events (v1.0.0)
+2026-06-27 16:52:04,669 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-27 16:52:04,670 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-27 16:52:04,671 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-27 16:52:04,672 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-27 16:52:04,672 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-27 16:52:04,672 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-27 16:52:04,672 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:52:04,672 | INFO     | [Application] | ReqID:- | User:- | Duplicate registration safely prevented: Service DummyService is already registered.
+2026-06-27 16:52:05,179 | INFO     | [MetadataEngine] | ReqID:- | User:- | Metadata Engine Core Initialized.
+2026-06-27 16:52:05,180 | INFO     | [Application] | ReqID:- | User:- | TestModule Initialized!
+2026-06-27 16:52:05,180 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Initialized.
+2026-06-27 16:52:05,180 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Initialized.
+2026-06-27 16:52:05,181 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Initialized.
+2026-06-27 16:52:05,182 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Initialized.
+2026-06-27 16:52:05,182 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Initialized.
+2026-06-27 16:52:05,182 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Initialized.
+2026-06-27 16:52:05,182 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Initialized.
+2026-06-27 16:52:05,182 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Initialized.
+2026-06-27 16:52:05,182 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Initialized with default SS Journey.
+2026-06-27 16:52:05,183 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Initialized.
+2026-06-27 16:52:05,183 | INFO     | [VectorDBModule] | ReqID:- | User:- | Initializing VectorDB Module...
+2026-06-27 16:52:05,184 | INFO     | [VectorDBClient] | ReqID:- | User:- | Initializing Persistent ChromaDB Client at D:\JSL Contigency\backend\..\storage\chromadb
+2026-06-27 16:52:05,341 | INFO     | [VectorDBClient] | ReqID:- | User:- | ChromaDB Client initialized successfully.
+2026-06-27 16:52:05,350 | INFO     | [CollectionManager] | ReqID:- | User:- | Successfully registered 8 default collections.
+2026-06-27 16:52:05,351 | INFO     | [VectorDBModule] | ReqID:- | User:- | VectorDB Module initialized successfully.
+2026-06-27 16:52:05,351 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Initializing Index Management Module...
+2026-06-27 16:52:05,351 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Initializing Embeddings Module...
+2026-06-27 16:52:05,351 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Embeddings Module initialized successfully.
+2026-06-27 16:52:05,351 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Initializing Synchronization Module...
+2026-06-27 16:52:05,351 | INFO     | [ConversationsModule] | ReqID:- | User:- | Initializing Conversations Module...
+2026-06-27 16:52:05,351 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Initialized.
+2026-06-27 16:52:05,351 | INFO     | [LifecycleManager] | ReqID:- | User:- | Enterprise Application Lifecycle Ready.
+2026-06-27 16:52:05,353 | INFO     | [DemoSeeder] | ReqID:- | User:- | Seeding Enterprise Demo Metadata...
+2026-06-27 16:52:05,353 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: machine
+2026-06-27 16:52:05,353 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: department
+2026-06-27 16:52:05,353 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: knowledge_doc
+2026-06-27 16:52:05,355 | INFO     | [DemoSeeder] | ReqID:- | User:- | Demo Metadata Seeding Complete.
+2026-06-27 16:52:05,377 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.NOT_FOUND - Resource Not Found: This is a test not found exception. on path /api/v1/test/error/not-found
+2026-06-27 16:52:05,379 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/not-found "HTTP/1.1 404 Not Found"
+2026-06-27 16:52:05,388 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:52:05,389 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/unhandled "HTTP/1.1 500 Internal Server Error"
+2026-06-27 16:52:05,392 | INFO     | [ExceptionHandler] | ReqID:- | User:- | Validation Error on path /api/v1/test/error/validation
+2026-06-27 16:52:05,393 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/test/error/validation "HTTP/1.1 422 Unprocessable Entity"
+2026-06-27 16:52:05,395 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 200 OK"
+2026-06-27 16:52:05,400 | INFO     | [AuthService] | ReqID:- | User:- | Attempting login for user: admin
+2026-06-27 16:52:05,648 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:52:05,648 | INFO     | [SessionManager] | ReqID:- | User:- | Auth Audit: User admin -> FAILED_PASSWORD
+2026-06-27 16:52:05,648 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.UNAUTHORIZED - Unauthorized: Invalid credentials. on path /api/v1/auth/login
+2026-06-27 16:52:05,649 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 401 Unauthorized"
+2026-06-27 16:52:05,651 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,651 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,653 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,654 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/change-password "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,655 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,656 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,658 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,659 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,660 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,661 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/logout "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,663 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,664 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,666 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:52:05,666 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_CREATED by u-sales-1 targeting 157da88d-5c3a-4a5c-805d-7b332b4684ab
+2026-06-27 16:52:05,666 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request 157da88d-5c3a-4a5c-805d-7b332b4684ab created by u-sales-1. (Awaiting Manager Approval)
+2026-06-27 16:52:05,667 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_APPROVED by u-admin-1 targeting 157da88d-5c3a-4a5c-805d-7b332b4684ab
+2026-06-27 16:52:05,667 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request 157da88d-5c3a-4a5c-805d-7b332b4684ab APPROVED by u-admin-1.
+2026-06-27 16:52:05,667 | INFO     | [AuthorizationPipeline] | ReqID:- | User:- | Access granted via temporary exception 157da88d-5c3a-4a5c-805d-7b332b4684ab for user u-sales-1
+2026-06-27 16:52:05,668 | INFO     | [EventBus] | ReqID:- | User:- | Publishing USER_REGISTERED to 1 handlers.
+2026-06-27 16:52:05,668 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | IN-APP Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:52:05,668 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | EMAIL Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:52:05,670 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,671 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test?search=%3Cscript%3Ealert(1)%3C/script%3E&action=DROP%20TABLE%20users "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,672 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,673 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,675 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,676 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,677 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,678 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,679 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,680 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,682 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,682 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,684 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:52:05,685 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:52:05,685 | INFO     | [RoadmapService] | ReqID:- | User:- | Initialized Roadmap rm-onboard for user u-test-88
+2026-06-27 16:52:05,685 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-welcome on roadmap rm-onboard
+2026-06-27 16:52:05,686 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-safety on roadmap rm-onboard
+2026-06-27 16:52:05,687 | INFO     | [LifecycleManager] | ReqID:- | User:- | Commencing Enterprise Application Graceful Shutdown...
+2026-06-27 16:52:05,687 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Shutdown.
+2026-06-27 16:52:05,687 | INFO     | [ConversationsModule] | ReqID:- | User:- | Shutting down Conversations Module...
+2026-06-27 16:52:05,687 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Shutting down Synchronization Module...
+2026-06-27 16:52:05,687 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Shutting down Embeddings Module...
+2026-06-27 16:52:05,688 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Shutting down Index Management Module...
+2026-06-27 16:52:05,688 | INFO     | [VectorDBModule] | ReqID:- | User:- | Shutting down VectorDB Module...
+2026-06-27 16:52:05,688 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Shutdown.
+2026-06-27 16:52:05,688 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Shutdown.
+2026-06-27 16:52:05,688 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Shutdown.
+2026-06-27 16:52:05,688 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Shutdown.
+2026-06-27 16:52:05,688 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Shutdown.
+2026-06-27 16:52:05,689 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Shutdown.
+2026-06-27 16:52:05,690 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Shutdown.
+2026-06-27 16:52:05,691 | INFO     | [Application] | ReqID:- | User:- | TestModule Shutdown Cleanly!
+2026-06-27 16:52:05,691 | INFO     | [LifecycleManager] | ReqID:- | User:- | Application Shutdown Complete.
+2026-06-27 16:53:40,345 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: TestModule (v1.0.0)
+2026-06-27 16:53:40,359 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-27 16:53:41,294 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-27 16:53:41,295 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Events (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-27 16:53:41,296 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-27 16:53:41,297 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-27 16:53:41,298 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-27 16:53:41,298 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-27 16:53:41,298 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-27 16:53:41,298 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-27 16:53:41,298 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-27 16:53:41,298 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Duplicate registration attempted for DummyService
+2026-06-27 16:53:41,299 | INFO     | [Application] | ReqID:- | User:- | Duplicate registration safely prevented: Service DummyService is already registered.
+2026-06-27 16:53:41,790 | INFO     | [MetadataEngine] | ReqID:- | User:- | Metadata Engine Core Initialized.
+2026-06-27 16:53:41,790 | INFO     | [Application] | ReqID:- | User:- | TestModule Initialized!
+2026-06-27 16:53:41,790 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Initialized.
+2026-06-27 16:53:41,790 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Initialized.
+2026-06-27 16:53:41,790 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Initialized.
+2026-06-27 16:53:41,791 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Initialized.
+2026-06-27 16:53:41,791 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Initialized.
+2026-06-27 16:53:41,791 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Initialized.
+2026-06-27 16:53:41,791 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Initialized.
+2026-06-27 16:53:41,791 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Initialized.
+2026-06-27 16:53:41,792 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Initialized.
+2026-06-27 16:53:41,793 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Initialized.
+2026-06-27 16:53:41,793 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Initialized.
+2026-06-27 16:53:41,793 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Initialized.
+2026-06-27 16:53:41,793 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Initialized with default SS Journey.
+2026-06-27 16:53:41,793 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Initialized.
+2026-06-27 16:53:41,793 | INFO     | [VectorDBModule] | ReqID:- | User:- | Initializing VectorDB Module...
+2026-06-27 16:53:41,794 | INFO     | [VectorDBClient] | ReqID:- | User:- | Initializing Persistent ChromaDB Client at D:\JSL Contigency\backend\..\storage\chromadb
+2026-06-27 16:53:41,958 | INFO     | [VectorDBClient] | ReqID:- | User:- | ChromaDB Client initialized successfully.
+2026-06-27 16:53:41,966 | INFO     | [CollectionManager] | ReqID:- | User:- | Successfully registered 8 default collections.
+2026-06-27 16:53:41,966 | INFO     | [VectorDBModule] | ReqID:- | User:- | VectorDB Module initialized successfully.
+2026-06-27 16:53:41,966 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Initializing Index Management Module...
+2026-06-27 16:53:41,967 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Initializing Embeddings Module...
+2026-06-27 16:53:41,967 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Embeddings Module initialized successfully.
+2026-06-27 16:53:41,967 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Initializing Synchronization Module...
+2026-06-27 16:53:41,967 | INFO     | [ConversationsModule] | ReqID:- | User:- | Initializing Conversations Module...
+2026-06-27 16:53:41,967 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Initialized.
+2026-06-27 16:53:41,967 | INFO     | [LifecycleManager] | ReqID:- | User:- | Enterprise Application Lifecycle Ready.
+2026-06-27 16:53:41,969 | INFO     | [DemoSeeder] | ReqID:- | User:- | Seeding Enterprise Demo Metadata...
+2026-06-27 16:53:41,969 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: machine
+2026-06-27 16:53:41,969 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: department
+2026-06-27 16:53:41,970 | INFO     | [MetadataEngine] | ReqID:- | User:- | Registering metadata type: knowledge_doc
+2026-06-27 16:53:41,971 | INFO     | [DemoSeeder] | ReqID:- | User:- | Demo Metadata Seeding Complete.
+2026-06-27 16:53:41,990 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.NOT_FOUND - Resource Not Found: This is a test not found exception. on path /api/v1/test/error/not-found
+2026-06-27 16:53:41,991 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/not-found "HTTP/1.1 404 Not Found"
+2026-06-27 16:53:42,002 | CRITICAL | [ExceptionHandler] | ReqID:- | User:- | Unhandled Exception: This is a raw python exception! on path /api/v1/test/error/unhandled
+Traceback (most recent call last):
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\modules\middleware\security_middleware.py", line 53, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2531, in app
+    await route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1700, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 2586, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1720, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 1239, in handle
+    await app(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\JSL Contigency\backend\venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\JSL Contigency\backend\test_startup.py", line 52, in trigger_unhandled
+    raise ValueError("This is a raw python exception!")
+ValueError: This is a raw python exception!
+
+2026-06-27 16:53:42,003 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/error/unhandled "HTTP/1.1 500 Internal Server Error"
+2026-06-27 16:53:42,006 | INFO     | [ExceptionHandler] | ReqID:- | User:- | Validation Error on path /api/v1/test/error/validation
+2026-06-27 16:53:42,007 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/test/error/validation "HTTP/1.1 422 Unprocessable Entity"
+2026-06-27 16:53:42,010 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 200 OK"
+2026-06-27 16:53:42,014 | INFO     | [AuthService] | ReqID:- | User:- | Attempting login for user: admin
+2026-06-27 16:53:42,290 | WARNING  | [AccountLockoutService] | ReqID:- | User:- | Failed login attempt for user admin. Count: 1
+2026-06-27 16:53:42,290 | INFO     | [SessionManager] | ReqID:- | User:- | Auth Audit: User admin -> FAILED_PASSWORD
+2026-06-27 16:53:42,290 | INFO     | [ExceptionHandler] | ReqID:- | User:- | ErrorCode.UNAUTHORIZED - Unauthorized: Invalid credentials. on path /api/v1/auth/login
+2026-06-27 16:53:42,292 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 401 Unauthorized"
+2026-06-27 16:53:42,293 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,294 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,295 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,296 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/change-password "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,297 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,298 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/login "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,300 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,300 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,302 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,303 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: POST http://testserver/api/v1/auth/logout "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,305 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,306 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/protected "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,309 | WARNING  | [AuthorizationPipeline] | ReqID:- | User:- | Cross-department strict access denied for u-sales-1. Yielding Overview Access.
+2026-06-27 16:53:42,309 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_CREATED by u-sales-1 targeting e9f86174-8816-4f8e-b3a9-c52a527c49ad
+2026-06-27 16:53:42,309 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request e9f86174-8816-4f8e-b3a9-c52a527c49ad created by u-sales-1. (Awaiting Manager Approval)
+2026-06-27 16:53:42,310 | INFO     | [AuditService] | ReqID:- | User:- | AUDIT LOG: ACCESS_REQUEST_APPROVED by u-admin-1 targeting e9f86174-8816-4f8e-b3a9-c52a527c49ad
+2026-06-27 16:53:42,310 | INFO     | [NotificationHooks] | ReqID:- | User:- | NOTIFICATION FIRED: Access Request e9f86174-8816-4f8e-b3a9-c52a527c49ad APPROVED by u-admin-1.
+2026-06-27 16:53:42,310 | INFO     | [AuthorizationPipeline] | ReqID:- | User:- | Access granted via temporary exception e9f86174-8816-4f8e-b3a9-c52a527c49ad for user u-sales-1
+2026-06-27 16:53:42,311 | INFO     | [EventBus] | ReqID:- | User:- | Publishing USER_REGISTERED to 1 handlers.
+2026-06-27 16:53:42,311 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | IN-APP Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:53:42,311 | INFO     | [NotificationDispatcher] | ReqID:- | User:- | EMAIL Delivery to u-test-99 | Welcome to JSL, Alice Developer!
+2026-06-27 16:53:42,313 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,314 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test?search=%3Cscript%3Ealert(1)%3C/script%3E&action=DROP%20TABLE%20users "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,315 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,316 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,318 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,318 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,320 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,321 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,323 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,323 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,325 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,326 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,327 | WARNING  | [RateLimiter] | ReqID:- | User:- | Rate limit exceeded for IP: testclient
+2026-06-27 16:53:42,328 | INFO     | [httpx] | ReqID:- | User:- | HTTP Request: GET http://testserver/api/v1/test/di/test "HTTP/1.1 429 Too Many Requests"
+2026-06-27 16:53:42,328 | INFO     | [RoadmapService] | ReqID:- | User:- | Initialized Roadmap rm-onboard for user u-test-88
+2026-06-27 16:53:42,329 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-welcome on roadmap rm-onboard
+2026-06-27 16:53:42,329 | INFO     | [RoadmapService] | ReqID:- | User:- | User u-test-88 COMPLETED node n-safety on roadmap rm-onboard
+2026-06-27 16:53:42,329 | INFO     | [KnowledgeService] | ReqID:- | User:- | Authored new Knowledge Object: Arc Furnace Safety Protocols (Status: DRAFT)
+2026-06-27 16:53:42,330 | INFO     | [LifecycleManager] | ReqID:- | User:- | Commencing Enterprise Application Graceful Shutdown...
+2026-06-27 16:53:42,330 | INFO     | [MetadataEngineModule] | ReqID:- | User:- | Metadata Engine Module Shutdown.
+2026-06-27 16:53:42,330 | INFO     | [ConversationsModule] | ReqID:- | User:- | Shutting down Conversations Module...
+2026-06-27 16:53:42,331 | INFO     | [SynchronizationModule] | ReqID:- | User:- | Shutting down Synchronization Module...
+2026-06-27 16:53:42,331 | INFO     | [EmbeddingsModule] | ReqID:- | User:- | Shutting down Embeddings Module...
+2026-06-27 16:53:42,331 | INFO     | [IndexManagementModule] | ReqID:- | User:- | Shutting down Index Management Module...
+2026-06-27 16:53:42,331 | INFO     | [VectorDBModule] | ReqID:- | User:- | Shutting down VectorDB Module...
+2026-06-27 16:53:42,331 | INFO     | [RoadmapModule] | ReqID:- | User:- | Roadmap Engine Shutdown.
+2026-06-27 16:53:42,331 | INFO     | [ManufacturingModule] | ReqID:- | User:- | Manufacturing Module Shutdown.
+2026-06-27 16:53:42,331 | INFO     | [LearningModule] | ReqID:- | User:- | Learning Module Shutdown.
+2026-06-27 16:53:42,331 | INFO     | [KnowledgeModule] | ReqID:- | User:- | Enterprise Knowledge Engine Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [MiddlewareModule] | ReqID:- | User:- | Enterprise Middleware Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [ValidationModule] | ReqID:- | User:- | Validation Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [AccessRequestModule] | ReqID:- | User:- | Access Request Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [NotificationsModule] | ReqID:- | User:- | Notifications Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [TemplatesModule] | ReqID:- | User:- | Templates Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [EventsModule] | ReqID:- | User:- | Events Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [AuditModule] | ReqID:- | User:- | Audit Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [AccountManagementModule] | ReqID:- | User:- | Account Management Module Shutdown.
+2026-06-27 16:53:42,332 | INFO     | [PoliciesModule] | ReqID:- | User:- | Policies Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [AuthorizationModule] | ReqID:- | User:- | Authorization Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [PermissionsModule] | ReqID:- | User:- | Permissions Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [OrganizationModule] | ReqID:- | User:- | Organization Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [UsersModule] | ReqID:- | User:- | Users Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [AuthModule] | ReqID:- | User:- | Authentication Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [SessionsModule] | ReqID:- | User:- | Sessions Module Shutdown.
+2026-06-27 16:53:42,333 | INFO     | [SecurityModule] | ReqID:- | User:- | Security Module Shutdown.
+2026-06-27 16:53:42,334 | INFO     | [Application] | ReqID:- | User:- | TestModule Shutdown Cleanly!
+2026-06-27 16:53:42,334 | INFO     | [LifecycleManager] | ReqID:- | User:- | Application Shutdown Complete.
+2026-06-29 13:17:15,913 | ERROR    | [fastapi] | ReqID:- | User:- | Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-06-29 13:25:30,651 | ERROR    | [fastapi] | ReqID:- | User:- | Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-06-29 13:45:48,653 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-29 13:45:48,947 | INFO     | [watchfiles.main] | ReqID:- | User:- | 177 changes detected
+2026-06-29 13:45:49,368 | INFO     | [watchfiles.main] | ReqID:- | User:- | 5 changes detected
+2026-06-29 13:45:49,722 | INFO     | [watchfiles.main] | ReqID:- | User:- | 6 changes detected
+2026-06-29 13:45:50,076 | INFO     | [watchfiles.main] | ReqID:- | User:- | 2 changes detected
+2026-06-29 13:45:50,437 | INFO     | [watchfiles.main] | ReqID:- | User:- | 8 changes detected
+2026-06-29 13:45:50,798 | INFO     | [watchfiles.main] | ReqID:- | User:- | 17 changes detected
+2026-06-29 13:45:50,948 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Database (v1.0.0)
+2026-06-29 13:45:50,948 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-29 13:45:50,948 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-29 13:45:50,948 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-29 13:45:50,948 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-29 13:45:50,949 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-29 13:45:50,950 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: EventPlatform (v2.0.0)
+2026-06-29 13:45:50,950 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: OperationsPlatform (v1.0.0)
+2026-06-29 13:45:50,950 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AdministrationPlatform (v1.0.0)
+2026-06-29 13:45:50,950 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-29 13:45:50,951 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-29 13:45:50,951 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-29 13:45:50,951 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-29 13:45:50,952 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-29 13:45:50,952 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-29 13:45:50,952 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-29 13:45:50,952 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-29 13:45:50,953 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: ObjectDesigner (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Ontology (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: KnowledgePlatform (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: SearchEngine (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: WorkflowEngine (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AIOrchestrationPlatform (v1.0.0)
+2026-06-29 13:45:50,954 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: GovernancePlatform (v1.0.0)
+2026-06-29 13:45:50,955 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IntegrationPlatform (v1.0.0)
+2026-06-29 13:45:50,955 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-29 13:45:51,155 | INFO     | [watchfiles.main] | ReqID:- | User:- | 101 changes detected
+2026-06-29 13:45:52,120 | INFO     | [watchfiles.main] | ReqID:- | User:- | 1 change detected
+2026-06-29 13:46:24,519 | INFO     | [watchfiles.main] | ReqID:- | User:- | 1 change detected
+2026-06-29 13:46:28,163 | INFO     | [watchfiles.main] | ReqID:- | User:- | 5 changes detected
+2026-06-29 13:46:30,601 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-29 13:46:30,632 | INFO     | [watchfiles.main] | ReqID:- | User:- | 1 change detected
+2026-06-29 13:46:32,194 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Database (v1.0.0)
+2026-06-29 13:46:32,194 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-29 13:46:32,195 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-29 13:46:32,195 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-29 13:46:32,195 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-29 13:46:32,195 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-29 13:46:32,196 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-29 13:46:32,196 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-29 13:46:32,196 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-29 13:46:32,197 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-29 13:46:32,197 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-29 13:46:32,197 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: EventPlatform (v2.0.0)
+2026-06-29 13:46:32,198 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: OperationsPlatform (v1.0.0)
+2026-06-29 13:46:32,198 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AdministrationPlatform (v1.0.0)
+2026-06-29 13:46:32,198 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-29 13:46:32,199 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-29 13:46:32,199 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-29 13:46:32,200 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-29 13:46:32,200 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-29 13:46:32,200 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-29 13:46:32,201 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-29 13:46:32,201 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-29 13:46:32,201 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-29 13:46:32,202 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-29 13:46:32,202 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-29 13:46:32,203 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-29 13:46:32,203 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-29 13:46:32,204 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-29 13:46:32,204 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-29 13:46:32,205 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: ObjectDesigner (v1.0.0)
+2026-06-29 13:46:32,206 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Ontology (v1.0.0)
+2026-06-29 13:46:32,206 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: KnowledgePlatform (v1.0.0)
+2026-06-29 13:46:32,206 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: SearchEngine (v1.0.0)
+2026-06-29 13:46:32,207 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: WorkflowEngine (v1.0.0)
+2026-06-29 13:46:32,207 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AIOrchestrationPlatform (v1.0.0)
+2026-06-29 13:46:32,207 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: GovernancePlatform (v1.0.0)
+2026-06-29 13:46:32,208 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IntegrationPlatform (v1.0.0)
+2026-06-29 13:46:32,208 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-29 13:46:33,434 | INFO     | [EventPlatformModule] | ReqID:- | User:- | Registering Enterprise Event Platform (EP-11) services...
+2026-06-29 13:46:33,435 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Resolution failed for GovernanceEngine
+2026-06-29 13:46:33,974 | INFO     | [watchfiles.main] | ReqID:- | User:- | 2 changes detected
+2026-06-29 13:46:49,781 | INFO     | [watchfiles.main] | ReqID:- | User:- | 1 change detected
+2026-06-29 13:46:51,810 | INFO     | [watchfiles.main] | ReqID:- | User:- | 1 change detected
+2026-06-29 13:46:52,304 | INFO     | [Application] | ReqID:- | User:- | Starting Process Contingency JSL - Enterprise API in Development mode.
+2026-06-29 13:46:53,525 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Database (v1.0.0)
+2026-06-29 13:46:53,525 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Security (v1.0.0)
+2026-06-29 13:46:53,525 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Sessions (v1.0.0)
+2026-06-29 13:46:53,525 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authentication (v1.0.0)
+2026-06-29 13:46:53,525 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Users (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Organization (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Permissions (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Authorization (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Policies (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccountManagement (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Audit (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: EventPlatform (v2.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: OperationsPlatform (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AdministrationPlatform (v1.0.0)
+2026-06-29 13:46:53,526 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Templates (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Notifications (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AccessRequest (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Validation (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Middleware (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Knowledge (v1.0.0)
+2026-06-29 13:46:53,527 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Learning (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Manufacturing (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Roadmap (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: VectorDB (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IndexManagement (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Embeddings (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Synchronization (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Conversations (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: MetadataEngine (v1.0.0)
+2026-06-29 13:46:53,528 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: ObjectDesigner (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: Ontology (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: KnowledgePlatform (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: SearchEngine (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: WorkflowEngine (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: AIOrchestrationPlatform (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: GovernancePlatform (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Registered Module: IntegrationPlatform (v1.0.0)
+2026-06-29 13:46:53,529 | INFO     | [LifecycleManager] | ReqID:- | User:- | Initializing Enterprise Application Lifecycle...
+2026-06-29 13:46:54,089 | INFO     | [EventPlatformModule] | ReqID:- | User:- | Registering Enterprise Event Platform (EP-11) services...
+2026-06-29 13:46:54,089 | INFO     | [OperationsPlatformModule] | ReqID:- | User:- | Registering Enterprise Operations Platform (EP-12) services...
+2026-06-29 13:46:54,089 | ERROR    | [ServiceContainer] | ReqID:- | User:- | Resolution failed for GovernanceEngine
+2026-06-29 13:46:54,776 | INFO     | [watchfiles.main] | ReqID:- | User:- | 11 changes detected

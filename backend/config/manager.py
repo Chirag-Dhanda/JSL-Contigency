@@ -2,7 +2,7 @@ from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from .modules.application import ApplicationSettings, ServerSettings, LoggingSettings
-from .modules.database import DatabaseSettings, CachingSettings, RateLimitingSettings
+from .modules.database import DatabaseSettings, CachingSettings, RateLimitingSettings, Neo4jSettings
 from .modules.security import SecuritySettings, AuthSettings
 from .modules.services import EmailSettings, NotificationSettings, StorageSettings
 from .modules.integrations import SAPSettings, AISettings
@@ -18,6 +18,7 @@ class ConfigManager(BaseSettings):
     db: DatabaseSettings = Field(default_factory=DatabaseSettings)
     cache: CachingSettings = Field(default_factory=CachingSettings)
     rate_limit: RateLimitingSettings = Field(default_factory=RateLimitingSettings)
+    neo4j: Neo4jSettings = Field(default_factory=Neo4jSettings)
     
     security: SecuritySettings = Field(default_factory=SecuritySettings)
     auth: AuthSettings = Field(default_factory=AuthSettings)

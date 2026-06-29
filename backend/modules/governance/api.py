@@ -12,22 +12,22 @@ router = APIRouter(prefix="/api/governance", tags=["Governance Platform"])
 
 @router.get("/entity/{entity_id}/state")
 async def get_state(entity_id: str):
-    pub: PublishingEngineService = container.resolve("PublishingEngineService")
+    pub: PublishingEngineService = container.resolve(PublishingEngineService)
     return {"state": pub.get_state(entity_id)}
 
 @router.get("/entity/{entity_id}/versions", response_model=List[VersionRecord])
 async def get_versions(entity_id: str):
-    ver: VersionEngineService = container.resolve("VersionEngineService")
+    ver: VersionEngineService = container.resolve(VersionEngineService)
     return ver.get_version_history(entity_id)
 
 @router.get("/entity/{entity_id}/audit", response_model=List[AuditRecord])
 async def get_audit(entity_id: str):
-    aud: AuditEngineService = container.resolve("AuditEngineService")
+    aud: AuditEngineService = container.resolve(AuditEngineService)
     return aud.get_history_for_entity(entity_id)
 
 @router.post("/entity/{entity_id}/publish")
 async def publish_entity(entity_id: str, user_id: str = "u-demo", notes: str = ""):
-    pub: PublishingEngineService = container.resolve("PublishingEngineService")
+    pub: PublishingEngineService = container.resolve(PublishingEngineService)
     try:
         pub.publish(entity_id, user_id, notes)
         return {"status": "success"}

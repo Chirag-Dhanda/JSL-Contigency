@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 import uuid
 
@@ -18,7 +18,7 @@ class LifecycleState(str, Enum):
 
 class AuditRecord(BaseModel):
     id: str = Field(default_factory=lambda: f"aud-{uuid.uuid4().hex[:8]}")
-    timestamp: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     user_id: str
     entity_id: str
     module: str
@@ -33,7 +33,7 @@ class VersionRecord(BaseModel):
     major_version: int
     minor_version: int
     patch_version: int
-    timestamp: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     author_id: str
     snapshot: Dict[str, Any]
     version_notes: str

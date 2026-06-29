@@ -32,9 +32,7 @@ def setup_logging():
     formatter = ContextFormatter(log_format)
     
     log_level = config.logging.log_level.upper()
-    level_num = logging.getLevelName(log_level)
-    if not isinstance(level_num, int):
-        level_num = logging.INFO
+    level_num = logging.getLevelNamesMapping().get(log_level, logging.INFO)
         
     root_logger = logging.getLogger()
     root_logger.setLevel(level_num)

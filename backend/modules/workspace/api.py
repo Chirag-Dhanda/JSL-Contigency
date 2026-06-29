@@ -12,8 +12,8 @@ async def get_workspace_profile(role: str = "ENGINEER", user_id: str = "u-demo")
     Returns the personalized workspace profile for the authenticated user.
     Mocking the authentication extraction by allowing query parameters.
     """
-    workspace_service: WorkspaceEngineService = container.resolve("WorkspaceEngineService")
-    personalization_service: PersonalizationEngineService = container.resolve("PersonalizationEngineService")
+    workspace_service: WorkspaceEngineService = container.resolve(WorkspaceEngineService)
+    personalization_service: PersonalizationEngineService = container.resolve(PersonalizationEngineService)
     
     # 1. Get Base Profile
     profile = workspace_service.get_workspace_for_user(user_id, role)

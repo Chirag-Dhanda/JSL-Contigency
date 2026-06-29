@@ -1,3 +1,3 @@
-from .module import EventsModule
+from .module import EventPlatformModule
 
-__all__ = ["EventsModule"]
+__all__ = ["EventPlatformModule"]
